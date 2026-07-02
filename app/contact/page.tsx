@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Let's Go Cards",
   description:
-    "Contact Let's Go Cards in West Easton, Pennsylvania for Pokemon card buying, selling, trading, and collection reviews."
+    "Contact Let's Go Cards in West Easton, Pennsylvania for Pokemon card buying, selling, trading, collection reviews, and grand opening updates.",
+  alternates: {
+    canonical: "/contact"
+  }
 };
 
 export default function Contact() {
