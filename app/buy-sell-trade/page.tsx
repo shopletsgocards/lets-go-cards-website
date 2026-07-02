@@ -4,7 +4,10 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Buy, Sell, and Trade Pokemon Cards",
   description:
-    "Buy singles, sell collections, and trade Pokemon cards at Let's Go Cards in West Easton, PA."
+    "Buy Pokemon cards, sell collections, and trade singles, PSA slabs, and sealed product at Let's Go Cards in West Easton, PA.",
+  alternates: {
+    canonical: "/buy-sell-trade"
+  }
 };
 
 const services = [
