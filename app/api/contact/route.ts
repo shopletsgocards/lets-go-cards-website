@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 const destinationEmail = "ShopLetsGoCards@gmail.com";
+const siteUrl = "https://www.shopletsgocards.com";
 const formHandlerUrl = `https://formsubmit.co/ajax/${destinationEmail}`;
 
 type ContactPayload = {
@@ -43,6 +44,7 @@ export async function POST(request: Request) {
   const formData = new FormData();
   formData.append("name", name);
   formData.append("email", email);
+  formData.append("_replyto", email);
   formData.append("message", fullMessage);
   formData.append("_subject", "New message from ShopLetsGoCards.com");
   formData.append("_template", "table");
@@ -52,12 +54,30 @@ export async function POST(request: Request) {
     const response = await fetch(formHandlerUrl, {
       method: "POST",
       headers: {
-        Accept: "application/json"
+        Accept: "application/json",
+        Origin: siteUrl,
+        Referer: `${siteUrl}/contact`
       },
       body: formData
     });
 
-    if (!response.ok) {
+    const responseText = await response.text();
+    let responseBody: { success?: boolean | string; message?: string } = {};
+
+    try {
+      responseBody = JSON.parse(responseText) as { success?: boolean | string; message?: string };
+    } catch {
+      responseBody = { message: responseText };
+    }
+
+    const wasSent = responseBody.success === true || responseBody.success === "true";
+
+    if (!response.ok || !wasSent) {
+      console.warn("Contact form email handler failed", {
+        status: response.status,
+        message: responseBody.message || "No response message from FormSubmit"
+      });
+
       return NextResponse.json(
         {
           message:
