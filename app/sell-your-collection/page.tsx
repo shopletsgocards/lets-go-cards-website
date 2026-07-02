@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { SellCollectionForm } from "./sell-collection-form";
 
 export const metadata: Metadata = {
-  title: "Sell Your Cards",
+  title: "Sell Pokemon Cards in West Easton, PA",
   description:
-    "Submit photos of your Pokemon card collection to Let's Go Cards in West Easton, PA for a cash offer."
+    "Sell Pokemon singles, PSA slabs, sealed product, binders, and complete collections to Let's Go Cards in West Easton, PA. Cash, trade, and consignment options may be available.",
+  alternates: {
+    canonical: "/sell-your-collection"
+  }
 };
 
 const cardTypes = [
