@@ -203,6 +203,60 @@ textarea {
   font-weight: 800;
 }
 
+.homepage-action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: clamp(24px, 4vw, 38px);
+}
+
+.homepage-action-card {
+  display: flex;
+  min-height: 210px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.14);
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.homepage-action-card:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 220, 103, 0.72);
+  transform: translateY(-3px);
+}
+
+.homepage-action-card span {
+  width: fit-content;
+  padding: 7px 10px;
+  color: var(--blue-950);
+  background: var(--gold-300);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.homepage-action-card h3 {
+  margin: 18px 0 8px;
+  color: white;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  line-height: 1.08;
+}
+
+.homepage-action-card p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.96rem !important;
+}
+
 .hero,
 .page-hero {
   position: relative;
@@ -1464,6 +1518,10 @@ small {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .homepage-action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .card-grid,
   .gallery-grid,
   .purchase-list,
@@ -1517,6 +1575,7 @@ small {
   }
 
   .info-strip,
+  .homepage-action-grid,
   .card-grid,
   .gallery-grid,
   .service-grid,
