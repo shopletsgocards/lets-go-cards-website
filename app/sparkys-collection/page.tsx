@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Sparky's Collection",
+  title: "Sparky's Collection | PSA Pokemon Card Gallery",
   description:
-    "Explore Sparky's Collection of premium PSA Pokemon cards at Let's Go Cards in West Easton, Pennsylvania."
+    "Explore Sparky's Collection, a premium PSA Pokemon card gallery featuring Moonbreon PSA 10, Gengar VMAX PSA 10, Pikachu ex PSA 10, and future grails.",
+  alternates: {
+    canonical: "/sparkys-collection"
+  }
 };
 
 const featuredCards = [
