@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Visit Us",
+  title: "Visit Let's Go Cards in West Easton, PA",
   description:
-    "Visit Let's Go Cards at 708A East Street in West Easton, Pennsylvania for Pokemon cards, trades, and collection reviews."
+    "Visit Let's Go Cards at 708A East Street in West Easton, Pennsylvania for Pokemon cards, PSA slabs, sealed product, trades, and collection reviews.",
+  alternates: {
+    canonical: "/visit-us"
+  }
 };
 
 const storeHours = [
