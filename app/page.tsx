@@ -5,9 +5,10 @@ const whyChoose = [
   ["Family-Owned Business", "Built by Wes, Laurin, and Enzo for families and collectors in the Lehigh Valley."],
   ["Fair and Transparent Offers", "Clear conversations about condition, demand, and available offer options."],
   ["Friendly Environment for Kids and Collectors", "A welcoming place to learn, browse, trade, and enjoy the hobby together."],
-  ["Pokémon-Focused Inventory", "A shop centered on Pokémon cards, collecting, and the fun of the hobby."],
+  ["Pokémon Specialty Store", "Everything we do revolves around Pokémon, from sealed product to singles, slabs, collections, and gifts."],
   ["PSA Graded Cards", "Premium slabs and collection highlights for collectors who love graded cards."],
-  ["Sealed Product", "Sealed Pokémon product for collectors, pack openers, and gift shopping."],
+  ["Sealed Product and Singles", "Pokémon sealed product and singles for collectors, pack openers, and gift shopping."],
+  ["Handmade Pokémon-Themed Gifts", "Laurin's handmade merchandise and gifts add a personal touch for fans and families."],
   ["Buy, Sell, and Trade Services", "Bring cards to the shop or submit photos for review."]
 ];
 
@@ -51,7 +52,7 @@ const storeHours = [
 const homepageActions = [
   {
     title: "Buy Pokémon Cards",
-    text: "Shop singles, PSA graded cards, sealed product, and kid-friendly collector picks.",
+    text: "Shop Pokémon singles, PSA graded cards, sealed products, and kid-friendly collector picks.",
     href: "/buy-sell-trade",
     label: "Shop Cards"
   },
@@ -83,17 +84,17 @@ export default function Home() {
           <p className="eyebrow">Opening update</p>
           <h2>COMING SOON TO WEST EASTON</h2>
           <p>
-            Let&apos;s Go Cards is a family-owned Pokémon card shop opening soon in West Easton,
-            Pennsylvania.
+            Let&apos;s Go Cards is a family-owned Pokémon specialty store opening soon in West
+            Easton, Pennsylvania.
           </p>
-          <h1>West Easton&apos;s Family-Friendly Pokémon Card Shop</h1>
+          <h1>The Lehigh Valley&apos;s Family-Friendly Pokémon Destination</h1>
           <p className="coming-soon-line">
-            Buy, Sell, Trade, and Discover Pokémon Cards, PSA Graded Cards, Sealed Product, and
-            Sparky&apos;s Collection.
+            Buy, Sell, Trade, and Discover Pokémon Sealed Products, Pokémon Singles, PSA Graded
+            Cards, Handmade Gifts, and Sparky&apos;s Collection.
           </p>
           <p>
             Conveniently located in West Easton, Pennsylvania, Let&apos;s Go Cards is being built
-            by collectors for collectors.
+            by Pokémon collectors for Pokémon collectors, families, and kids discovering the hobby.
           </p>
           <div className="button-row">
             <Link className="button primary" href="/contact">
@@ -141,19 +142,22 @@ export default function Home() {
 
       <section className="section family-section">
         <div className="family-story">
-          <p className="eyebrow">Family-owned in the Lehigh Valley</p>
+          <p className="eyebrow">Lehigh Valley Pokémon destination</p>
           <h2>Meet the Family Behind Let&apos;s Go Cards</h2>
           <p>
             Let&apos;s Go Cards was created by Wes, Laurin, and Enzo to share the fun of
-            collecting Pokémon cards with families throughout the Lehigh Valley.
+            collecting Pokémon cards with families throughout the Lehigh Valley. Our shop is
+            intentionally focused on Pokémon so every display case, sealed product, trade
+            conversation, and gift feels connected to the world collectors love.
           </p>
           <p>
-            What started as a family hobby grew into a dream of creating a welcoming place where
-            collectors of all experience levels can buy, sell, trade, learn, and enjoy the hobby
-            together.
+            As Pokémon celebrates its 30th anniversary, the hobby is bringing generations together
+            in a special way: parents who collected as children now get to open packs, trade cards,
+            and chase favorite characters with kids discovering Pokémon for the first time.
           </p>
           <p>
-            Inspired by our son Enzo&apos;s love of Pokémon, Let&apos;s Go Cards was created to bring
+            Inspired by our son Enzo&apos;s love of Pokémon and Laurin&apos;s handmade
+            Pokémon-themed merchandise and gifts, Let&apos;s Go Cards was created to bring
             collectors of all ages together.
           </p>
         </div>
@@ -186,11 +190,12 @@ export default function Home() {
           ))}
         </div>
         <div className="section-heading why-inline-heading">
-          <p className="eyebrow">Your local card shop</p>
+          <p className="eyebrow">Your Pokémon specialty shop</p>
           <h2>Why Choose Let&apos;s Go Cards?</h2>
           <p>
-            Whether you are buying, selling, trading, or learning the hobby with your family,
-            Let&apos;s Go Cards keeps the experience clear, friendly, and collector-focused.
+            By focusing on Pokémon, Let&apos;s Go Cards can create a deeper, friendlier experience
+            for collectors and families looking for sealed product, singles, PSA graded cards,
+            collection reviews, trades, and thoughtful Pokémon-themed gifts.
           </p>
         </div>
         <div className="why-grid">
