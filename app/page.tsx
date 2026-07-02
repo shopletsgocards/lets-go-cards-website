@@ -48,6 +48,33 @@ const storeHours = [
   ["Sunday", "Hours coming soon"]
 ];
 
+const homepageActions = [
+  {
+    title: "Buy Pokémon Cards",
+    text: "Shop singles, PSA graded cards, sealed product, and kid-friendly collector picks.",
+    href: "/buy-sell-trade",
+    label: "Shop Cards"
+  },
+  {
+    title: "Sell Your Collection",
+    text: "Submit singles, slabs, binders, sealed product, or full collections for review.",
+    href: "/sell-your-collection",
+    label: "Start Review"
+  },
+  {
+    title: "Trade With Us",
+    text: "Talk through fair trades based on condition, demand, and current collector interest.",
+    href: "/buy-sell-trade",
+    label: "Trade Cards"
+  },
+  {
+    title: "Grand Opening Updates",
+    text: "Follow the West Easton opening, store buildout, and first inventory announcements.",
+    href: "/contact",
+    label: "Follow Along"
+  }
+];
+
 export default function Home() {
   return (
     <main>
@@ -75,6 +102,15 @@ export default function Home() {
             <Link className="button secondary" href="/contact">
               Contact Us
             </Link>
+          </div>
+          <div className="homepage-action-grid" aria-label="Popular actions">
+            {homepageActions.map((action) => (
+              <Link className="homepage-action-card" href={action.href} key={action.title}>
+                <span>{action.label}</span>
+                <h3>{action.title}</h3>
+                <p>{action.text}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
