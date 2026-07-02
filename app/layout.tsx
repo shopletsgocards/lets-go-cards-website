@@ -13,26 +13,108 @@ const navItems = [
   ["Contact", "/contact"]
 ];
 
+const siteUrl = "https://www.shopletsgocards.com";
+
 export const metadata: Metadata = {
   title: {
     default: "Let's Go Cards | Pokemon Card Shop in West Easton, PA",
     template: "%s | Let's Go Cards"
   },
   description:
-    "Let's Go Cards is a family-friendly Pokemon card shop in West Easton, Pennsylvania, buying, selling, and trading collections, sealed product, and premium graded cards.",
-  metadataBase: new URL("https://www.ShopLetsGoCards.com"),
+    "Let's Go Cards is a family-owned Pokemon card shop opening soon in West Easton, PA. Buy, sell, and trade Pokemon cards, PSA graded cards, sealed product, and collections.",
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/"
+  },
+  applicationName: "Let's Go Cards",
+  keywords: [
+    "Pokemon card shop West Easton PA",
+    "sell Pokemon cards Lehigh Valley",
+    "Pokemon cards Easton PA",
+    "PSA graded Pokemon cards",
+    "Pokemon card collections",
+    "sealed Pokemon product"
+  ],
   icons: {
     icon: "/favicon.jpg"
   },
   openGraph: {
-    title: "Let's Go Cards",
+    title: "Let's Go Cards | Pokemon Card Shop in West Easton, PA",
     description:
-      "Family-friendly Pokemon card shop in West Easton, PA for buying, selling, trading, and premium PSA cards.",
-    url: "https://www.ShopLetsGoCards.com",
+      "Family-owned Pokemon card shop opening soon in West Easton, PA for buying, selling, trading, PSA graded cards, sealed product, and collections.",
+    url: siteUrl,
     siteName: "Let's Go Cards",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1320,
+        height: 1660,
+        alt: "Let's Go Cards logo"
+      }
+    ],
     locale: "en_US",
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Let's Go Cards | Pokemon Card Shop in West Easton, PA",
+    description:
+      "Family-owned Pokemon card shop opening soon in West Easton, PA for buying, selling, trading, PSA graded cards, sealed product, and collections.",
+    images: ["/logo.jpg"]
   }
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "@id": `${siteUrl}/#localbusiness`,
+  name: "Let's Go Cards",
+  url: siteUrl,
+  image: `${siteUrl}/logo.jpg`,
+  logo: `${siteUrl}/logo.jpg`,
+  description:
+    "Family-owned Pokemon card shop opening soon in West Easton, Pennsylvania, offering Pokemon cards, PSA graded cards, sealed product, collection reviews, buying, selling, and trading.",
+  telephone: "+1-484-261-1453",
+  email: "ShopLetsGoCards@gmail.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "708A East Street",
+    addressLocality: "West Easton",
+    addressRegion: "PA",
+    postalCode: "18042",
+    addressCountry: "US"
+  },
+  areaServed: [
+    "West Easton PA",
+    "Easton PA",
+    "Lehigh Valley PA",
+    "Northampton County PA"
+  ],
+  priceRange: "$$",
+  sameAs: ["https://www.facebook.com/share/1EELuF6yk5/?mibextid=wwXIfr"],
+  makesOffer: [
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Buy Pokemon cards"
+      }
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Sell Pokemon card collections"
+      }
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Trade Pokemon cards"
+      }
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -43,6 +125,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema).replace(/</g, "\\u003c")
+          }}
+        />
         <div className="top-info-bar">
           <div className="top-info-content">
             <address>
