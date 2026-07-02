@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SellCollectionForm } from "./sell-collection-form";
 
 export const metadata: Metadata = {
   title: "Sell Your Cards",
@@ -46,63 +47,7 @@ export default function SellYourCollection() {
       </section>
 
       <section className="form-section">
-        <form
-          className="contact-form"
-          action="mailto:shopletsgocards@gmail.com"
-          method="post"
-          encType="multipart/form-data"
-        >
-          <input type="hidden" name="recipient" value="shopletsgocards@gmail.com" />
-          <div className="field-group">
-            <label htmlFor="name">Name</label>
-            <input id="name" name="name" type="text" autoComplete="name" required />
-          </div>
-          <div className="field-group">
-            <label htmlFor="phone">Phone</label>
-            <input id="phone" name="phone" type="tel" autoComplete="tel" required />
-          </div>
-          <div className="field-group">
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" autoComplete="email" required />
-          </div>
-          <div className="field-group">
-            <label htmlFor="type">Collection type</label>
-            <select id="type" name="collectionType" defaultValue="">
-              <option value="" disabled>
-                Select one
-              </option>
-              <option>Binder collection</option>
-              <option>Graded cards</option>
-              <option>Sealed product</option>
-              <option>Vintage cards</option>
-              <option>Mixed collection</option>
-            </select>
-          </div>
-          <div className="field-group">
-            <label htmlFor="value">Estimated value</label>
-            <input id="value" name="estimatedValue" type="text" placeholder="$500, $2,000, unsure" />
-          </div>
-          <div className="field-group full">
-            <label htmlFor="photos">Upload collection photos</label>
-            <input id="photos" name="photos" type="file" accept="image/*" multiple />
-            <small>
-              Multiple photos are welcome. Clear binder pages, card fronts, and slabs help most.
-              Submissions are intended for shopletsgocards@gmail.com.
-            </small>
-          </div>
-          <div className="field-group full">
-            <label htmlFor="comments">Comments</label>
-            <textarea
-              id="comments"
-              name="comments"
-              rows={6}
-              placeholder="Tell us what you have, how long you've owned it, and whether you prefer cash, trade, or store credit."
-            />
-          </div>
-          <button className="button primary sell-cta" type="submit">
-            Submit Collection
-          </button>
-        </form>
+        <SellCollectionForm />
         <aside className="tip-panel">
           <h2>Offer options</h2>
           <p>

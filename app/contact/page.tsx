@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -18,23 +19,7 @@ export default function Contact() {
         </p>
       </section>
       <section className="contact-layout">
-        <form className="contact-form" action="mailto:shopletsgocards@gmail.com" method="post">
-          <div className="field-group">
-            <label htmlFor="contact-name">Name</label>
-            <input id="contact-name" name="name" type="text" autoComplete="name" required />
-          </div>
-          <div className="field-group">
-            <label htmlFor="contact-email">Email</label>
-            <input id="contact-email" name="email" type="email" autoComplete="email" required />
-          </div>
-          <div className="field-group full">
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows={7} required />
-          </div>
-          <button className="button primary" type="submit">
-            Send Message
-          </button>
-        </form>
+        <ContactForm />
         <aside className="contact-card">
           <h2>Store Info</h2>
           <p>

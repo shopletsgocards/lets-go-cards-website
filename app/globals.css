@@ -1204,6 +1204,31 @@ h3 {
   grid-column: 1 / -1;
 }
 
+.contact-form .button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.form-status {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-weight: 800;
+}
+
+.form-status.success {
+  color: #174a23;
+  background: #e7f8ec;
+  border: 1px solid #a5dcb5;
+}
+
+.form-status.error {
+  color: #7a1717;
+  background: #fff0f0;
+  border: 1px solid #f1b5b5;
+}
+
 label {
   color: var(--blue-950);
   font-weight: 900;
