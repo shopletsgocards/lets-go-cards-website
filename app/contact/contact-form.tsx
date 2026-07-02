@@ -4,6 +4,8 @@ import { FormEvent, useState } from "react";
 
 type SubmitState = "idle" | "sending" | "success" | "error";
 
+const formSubmitUrl = "https://formsubmit.co/ajax/ShopLetsGoCards@gmail.com";
+
 export function ContactForm() {
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [statusMessage, setStatusMessage] = useState("");
@@ -15,29 +17,29 @@ export function ContactForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const email = String(formData.get("email") ?? "");
 
-    const payload = {
-      name: String(formData.get("name") ?? ""),
-      email: String(formData.get("email") ?? ""),
-      message: String(formData.get("message") ?? "")
-    };
+    formData.append("_replyto", email);
+    formData.append("_subject", "New message from ShopLetsGoCards.com");
+    formData.append("_template", "table");
+    formData.append("_captcha", "false");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(formSubmitUrl, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          Accept: "application/json"
         },
-        body: JSON.stringify(payload)
+        body: formData
       });
-      const data = (await response.json()) as { message?: string };
+      const data = (await response.json()) as { message?: string; success?: boolean | string };
 
-      if (!response.ok) {
+      if (!response.ok || !(data.success === true || data.success === "true")) {
         throw new Error(data.message || "The message could not be sent.");
       }
 
       setSubmitState("success");
-      setStatusMessage(data.message || "Thanks! Your message has been sent.");
+      setStatusMessage("Thanks! Your message has been sent to Let's Go Cards.");
       form.reset();
     } catch (error) {
       setSubmitState("error");
