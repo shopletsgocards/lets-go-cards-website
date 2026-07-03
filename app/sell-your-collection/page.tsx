@@ -4,13 +4,14 @@ import { SellCollectionForm } from "./sell-collection-form";
 export const metadata: Metadata = {
   title: "Sell Pokemon Cards in West Easton, PA",
   description:
-    "Sell Pokemon singles, PSA slabs, sealed product, binders, and complete collections to Let's Go Cards in West Easton, PA. Cash, trade, and consignment options may be available.",
+    "Sell Pokemon singles, PSA slabs, sealed product, binders, and complete collections to Let's Go Cards in West Easton, PA. Fair cash offers, safe transactions, and no-pressure reviews.",
   alternates: {
     canonical: "/sell-your-collection"
   }
 };
 
 const cardTypes = [
+  "Single PSA cards",
   "Singles",
   "PSA slabs",
   "Sealed Pokémon product",
@@ -22,11 +23,11 @@ export default function SellYourCollection() {
   return (
     <main>
       <section className="page-hero compact">
-        <p className="eyebrow">Cash offers for Pokemon collections</p>
+        <p className="eyebrow">Fair cash offers for Pokémon collections</p>
         <h1>Sell Your Cards</h1>
         <p>
-          Send photos of your Pokemon cards, slabs, sealed product, or full collection and receive
-          a clear next step from Let&apos;s Go Cards.
+          Sell one PSA graded card, a binder, sealed Pokémon product, or an entire collection
+          through a safe, professional, no-pressure review with Let&apos;s Go Cards.
         </p>
       </section>
 
@@ -35,8 +36,10 @@ export default function SellYourCollection() {
           <p className="eyebrow">What we review</p>
           <h2>Sell Your Cards Your Way</h2>
           <p>
-            Bring cards to the shop or send photos first. Depending on the collection, cash offers,
-            trade offers, and consignment options may be available.
+            Bring cards to the shop or send photos first. We are a licensed, family-owned Pokémon
+            specialty store focused on honest conversations, fair cash offers, and long-term
+            relationships with collectors. Trade offers and consignment options may also be
+            available depending on the collection.
           </p>
         </div>
         <div className="sell-type-grid">
@@ -52,10 +55,16 @@ export default function SellYourCollection() {
       <section className="form-section">
         <SellCollectionForm />
         <aside className="tip-panel">
-          <h2>Offer options</h2>
+          <h2>A clear, respectful review</h2>
           <p>
-            Let&apos;s Go Cards may be able to discuss cash offers, trade offers, or consignment
-            options after reviewing condition, demand, and current market interest.
+            Let&apos;s Go Cards reviews condition, demand, and current market interest before making
+            an offer. You can ask questions, compare options, and decide what feels right without
+            pressure.
+          </p>
+          <h3>What sellers can expect</h3>
+          <p>
+            Safe, professional transactions, fair cash offers when we can make them, and a clear
+            next step whether you have one special PSA card or a complete Pokémon collection.
           </p>
           <h3>Photo tips</h3>
           <p>
