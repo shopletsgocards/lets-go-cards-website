@@ -30,10 +30,15 @@ export default function AboutUs() {
             gifts.
           </p>
           <p>
-            Our focus is intentional. By centering everything around Pokémon, we can give families
-            and collectors a more thoughtful experience, from helping a new collector choose a
-            first pack to talking through condition, value, and fair trade options with experienced
-            collectors.
+            Our focus is intentional. We keep Let&apos;s Go Cards centered on Pokémon so families
+            and collectors can enjoy a more thoughtful experience, from helping a new collector
+            choose a first pack to talking through condition, value, and fair trade options with
+            experienced collectors.
+          </p>
+          <p>
+            Everything we do is built around trust: honest conversations, transparent collection
+            reviews, fair offers, safe professional transactions, and long-term relationships with
+            collectors who want a local shop they can come back to.
           </p>
           <p>
             As Pokémon celebrates its 30th anniversary, it is amazing to see how the hobby connects
@@ -42,8 +47,8 @@ export default function AboutUs() {
           </p>
           <p>
             That is the heart of Let&apos;s Go Cards: a professional, family-friendly Pokémon shop
-            where collectors of every age can buy, sell, trade, learn, celebrate big pulls, and
-            feel welcome.
+            where collectors of every age can buy, sell, trade, learn, celebrate big pulls, discover
+            handmade gifts, and feel like part of the local Pokémon community.
           </p>
         </div>
         <div className="family-card">
