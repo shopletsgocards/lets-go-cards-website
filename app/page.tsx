@@ -2,9 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const whyChoose = [
-  ["Family-Owned Business", "Built by Wes, Laurin, and Enzo for families and collectors in the Lehigh Valley."],
-  ["Fair and Transparent Offers", "Clear conversations about condition, demand, and available offer options."],
-  ["Friendly Environment for Kids and Collectors", "A welcoming place to learn, browse, trade, and enjoy the hobby together."],
+  ["Family-Owned Business", "Built by Wes, Laurin, and Enzo for families and Pokémon collectors in the Lehigh Valley."],
+  ["Honest and Transparent", "Clear conversations about condition, demand, collection values, and available offer options."],
+  ["Fair Collection Buying", "Professional, no-pressure reviews for everything from one PSA card to an entire Pokémon collection."],
+  ["Long-Term Collector Relationships", "A welcoming place to learn, return, trade, and grow with the local Pokémon community."],
   ["Pokémon Specialty Store", "Everything we do revolves around Pokémon, from sealed product to singles, slabs, collections, and gifts."],
   ["PSA Graded Cards", "Premium slabs and collection highlights for collectors who love graded cards."],
   ["Sealed Product and Singles", "Pokémon sealed product and singles for collectors, pack openers, and gift shopping."],
@@ -51,28 +52,28 @@ const storeHours = [
 
 const homepageActions = [
   {
-    title: "Buy Pokémon Cards",
+    title: "Shop Pokémon Products",
     text: "Shop Pokémon singles, PSA graded cards, sealed products, and kid-friendly collector picks.",
     href: "/buy-sell-trade",
-    label: "Shop Cards"
+    label: "Shop"
   },
   {
     title: "Sell Your Collection",
-    text: "Submit singles, slabs, binders, sealed product, or full collections for review.",
+    text: "Get a fair, no-pressure review for one PSA card, sealed product, binders, or full collections.",
     href: "/sell-your-collection",
-    label: "Start Review"
+    label: "Sell"
   },
   {
-    title: "Trade With Us",
-    text: "Talk through fair trades based on condition, demand, and current collector interest.",
-    href: "/buy-sell-trade",
-    label: "Trade Cards"
+    title: "Visit the Store",
+    text: "Plan your visit to our West Easton shop and meet a family-owned Pokémon community hub.",
+    href: "/visit-us",
+    label: "Visit"
   },
   {
-    title: "Grand Opening Updates",
-    text: "Follow the West Easton opening, store buildout, and first inventory announcements.",
+    title: "Contact Us",
+    text: "Ask about inventory, selling a collection, trades, handmade gifts, or grand opening updates.",
     href: "/contact",
-    label: "Follow Along"
+    label: "Contact"
   }
 ];
 
@@ -94,14 +95,18 @@ export default function Home() {
           </p>
           <p>
             Conveniently located in West Easton, Pennsylvania, Let&apos;s Go Cards is being built
-            by Pokémon collectors for Pokémon collectors, families, and kids discovering the hobby.
+            for families, collectors, and kids who want a welcoming place where every shelf,
+            display case, trade conversation, and handmade gift is centered on Pokémon.
           </p>
           <div className="button-row">
-            <Link className="button primary" href="/contact">
-              Follow Our Progress
+            <Link className="button primary" href="/buy-sell-trade">
+              Shop Pokémon Products
             </Link>
-            <Link className="button secondary" href="/contact">
-              Contact Us
+            <Link className="button secondary" href="/sell-your-collection">
+              Sell Your Collection
+            </Link>
+            <Link className="button secondary" href="/visit-us">
+              Visit the Store
             </Link>
           </div>
           <div className="homepage-action-grid" aria-label="Popular actions">
@@ -151,6 +156,11 @@ export default function Home() {
             conversation, and gift feels connected to the world collectors love.
           </p>
           <p>
+            We are not trying to be every kind of card store. Our shelves, buying counter, and
+            community are dedicated to Pokémon, which helps us create a better experience for
+            collectors, parents, and kids who love the same world we do.
+          </p>
+          <p>
             As Pokémon celebrates its 30th anniversary, the hobby is bringing generations together
             in a special way: parents who collected as children now get to open packs, trade cards,
             and chase favorite characters with kids discovering Pokémon for the first time.
@@ -194,8 +204,8 @@ export default function Home() {
           <h2>Why Choose Let&apos;s Go Cards?</h2>
           <p>
             By focusing on Pokémon, Let&apos;s Go Cards can create a deeper, friendlier experience
-            for collectors and families looking for sealed product, singles, PSA graded cards,
-            collection reviews, trades, and thoughtful Pokémon-themed gifts.
+            for families and collectors looking for sealed product, singles, PSA graded cards,
+            safe collection reviews, fair trades, and thoughtful Pokémon-themed gifts.
           </p>
         </div>
         <div className="why-grid">
@@ -246,7 +256,8 @@ export default function Home() {
           <h2>Sell Your Cards</h2>
           <p>
             Bring Pokémon singles, PSA graded cards, sealed product, binders, or complete
-            collections to the shop, or submit photos for review before visiting.
+            collections to the shop, or submit photos first. Reviews are professional,
+            transparent, and never high pressure.
           </p>
         </div>
         <Link className="button primary sell-cta" href="/sell-your-collection">
@@ -307,8 +318,8 @@ export default function Home() {
         <div>
           <h2>Contact</h2>
           <p>
-            Questions about the opening, collection reviews, or Sparky&apos;s Collection? Reach out
-            to the Let&apos;s Go Cards family.
+            Questions about shopping Pokémon products, selling a collection, visiting the store, or
+            joining the local Pokémon community? Reach out to the Let&apos;s Go Cards family.
           </p>
         </div>
         <Link className="button primary sell-cta" href="/contact">
