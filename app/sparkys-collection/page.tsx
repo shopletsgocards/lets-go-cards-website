@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { FaqJsonLd, FaqSection, type FaqItem } from "../shared";
 
 export const metadata: Metadata = {
-  title: "Sparky's Collection | PSA Pokemon Card Gallery",
+  title: "PSA Pokémon Card Gallery | Sparky's Collection",
   description:
-    "Explore Sparky's Collection, a premium PSA Pokemon card gallery featuring Moonbreon PSA 10, Gengar VMAX PSA 10, Pikachu ex PSA 10, and future grails.",
+    "Explore Sparky's Collection at Let's Go Cards, a PSA Pokémon card gallery featuring Moonbreon PSA 10, Gengar VMAX PSA 10, Pikachu slabs, and family favorites.",
   alternates: {
     canonical: "/sparkys-collection"
   }
@@ -64,16 +66,35 @@ const collectionHighlights = [
   ["Growing gallery", "Sparky's Collection will keep expanding as new grails and shop favorites arrive."]
 ];
 
+const sparkyFaq: FaqItem[] = [
+  {
+    question: "What is Sparky's Collection?",
+    answer:
+      "Sparky's Collection is a family collection gallery at Let's Go Cards featuring memorable PSA graded Pokémon cards, favorite pulls, and display pieces."
+  },
+  {
+    question: "Can I shop for PSA graded Pokémon cards at Let's Go Cards?",
+    answer:
+      "Yes. Let's Go Cards focuses on Pokémon singles, PSA graded Pokémon cards, sealed products, trades, and collection reviews."
+  },
+  {
+    question: "Are the featured cards listed with prices?",
+    answer:
+      "No. Sparky's Collection is presented like a small gallery for collectors to enjoy, with card stories and highlights rather than prices."
+  }
+];
+
 export default function SparkysCollection() {
   return (
     <main>
+      <FaqJsonLd items={sparkyFaq} />
       <section className="page-hero sparky-page-hero">
         <div>
-          <p className="eyebrow">Family collection gallery</p>
+          <p className="eyebrow">PSA Pokémon card gallery</p>
           <h1>Sparky&apos;s Collection</h1>
           <p>
             A curated showcase of memorable PSA cards, family favorites, and premium pieces from
-            the Let&apos;s Go Cards collection.
+            the Let&apos;s Go Cards collection in West Easton.
           </p>
         </div>
         <Image
@@ -94,6 +115,7 @@ export default function SparkysCollection() {
             Sparky is the official mascot of Let&apos;s Go Cards. He loves collecting cards, helping
             new trainers start their collections, and sharing the excitement of discovering
             something special. Sparky represents everything we believe in: Trade • Collect • Fun.
+            Want to see more in person? <Link href="/visit-us">Plan your visit</Link>.
           </p>
         </div>
         <div className="museum-mascot-frame">
@@ -164,6 +186,11 @@ export default function SparkysCollection() {
           ))}
         </div>
       </section>
+      <FaqSection
+        title="Sparky's Collection FAQ"
+        intro="Answers about the gallery, PSA slabs, and what collectors can expect when they visit."
+        items={sparkyFaq}
+      />
     </main>
   );
 }

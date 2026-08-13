@@ -22,6 +22,65 @@ const purchases = [
   "Sealed Pokémon product"
 ];
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export function FaqSection({
+  eyebrow = "Frequently asked questions",
+  title,
+  intro,
+  items
+}: {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  items: FaqItem[];
+}) {
+  return (
+    <section className="section faq-section">
+      <div className="section-heading">
+        <p className="eyebrow">{eyebrow}</p>
+        <h2>{title}</h2>
+        {intro ? <p>{intro}</p> : null}
+      </div>
+      <div className="faq-grid">
+        {items.map((item) => (
+          <article className="faq-item" key={item.question}>
+            <h3>{item.question}</h3>
+            <p>{item.answer}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function FaqJsonLd({ items }: { items: FaqItem[] }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema).replace(/</g, "\\u003c")
+      }}
+    />
+  );
+}
+
 export function CardShowcase({
   title,
   subtitle

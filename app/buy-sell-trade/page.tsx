@@ -1,31 +1,57 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FaqJsonLd, FaqSection, type FaqItem } from "../shared";
 
 export const metadata: Metadata = {
-  title: "Buy, Sell, and Trade Pokemon Cards",
+  title: "Buy, Sell & Trade Pokémon Cards in Easton, PA",
   description:
-    "Buy Pokemon cards, sell collections, and trade singles, PSA slabs, and sealed product at Let's Go Cards in West Easton, PA.",
+    "Buy, Sell & Trade Pokémon Cards in Easton, PA at Let's Go Cards. Shop singles, PSA slabs, sealed products, and get fair collection reviews.",
   alternates: {
     canonical: "/buy-sell-trade"
   }
 };
 
 const services = [
-  ["Buy", "Shop singles, slabs, sealed product, supplies, and kid-friendly starter picks."],
-  ["Sell", "Get straightforward offers for singles, binders, graded cards, and sealed collections."],
-  ["Trade", "Work with the team to make fair trades based on condition, demand, and current market."],
-  ["Grade Prep", "Get a second set of eyes before deciding which cards may be worth grading."]
+  ["Buy Pokémon Cards", "Shop Pokémon singles, PSA graded cards, sealed Pokémon products, supplies, and kid-friendly starter picks."],
+  ["Sell Pokémon Cards", "Get straightforward offers for Pokémon singles, binders, graded cards, sealed product, and full collections."],
+  ["Trade Pokémon Cards", "Work with the team to make fair local trades based on condition, demand, and current market interest."],
+  ["Collection Reviews", "Get a second set of eyes before deciding what to sell, trade, keep, or consider for grading."]
+];
+
+const buySellTradeFaq: FaqItem[] = [
+  {
+    question: "Can I trade Pokémon cards at Let's Go Cards?",
+    answer:
+      "Yes. Let’s Go Cards reviews trade options based on card condition, demand, and current market interest so collectors can make fair local trades."
+  },
+  {
+    question: "What Pokémon products can I shop for?",
+    answer:
+      "The shop focuses on Pokémon sealed products, Pokémon singles, PSA graded Pokémon cards, collector supplies, and handmade Pokémon-themed gifts."
+  },
+  {
+    question: "Can I sell cards during the same visit?",
+    answer:
+      "Yes. You can bring Pokémon singles, PSA slabs, sealed product, binders, or larger collections for a no-pressure review while you are at the shop."
+  },
+  {
+    question: "Do you help new collectors understand values?",
+    answer:
+      "Yes. The team explains condition, demand, grading, and trade considerations in a friendly way for kids, parents, and experienced collectors."
+  }
 ];
 
 export default function BuySellTrade() {
   return (
     <main>
+      <FaqJsonLd items={buySellTradeFaq} />
       <section className="page-hero compact">
-        <p className="eyebrow">Your local card counter</p>
-        <h1>Buy / Sell / Trade</h1>
+        <p className="eyebrow">Pokémon card counter in West Easton</p>
+        <h1>Buy, Sell &amp; Trade Pokémon Cards in Easton, PA</h1>
         <p>
-          Whether you are chasing one card, moving a full collection, or helping a new collector
-          learn the hobby, we keep the experience clear and welcoming.
+          Whether you are chasing one Pokémon card, moving a full collection, trading locally, or
+          helping a new collector learn the hobby, we keep the experience clear, fair, and
+          welcoming.
         </p>
       </section>
       <section className="section">
@@ -41,13 +67,23 @@ export default function BuySellTrade() {
       </section>
       <section className="cta-band">
         <div>
-          <h2>Ready for an offer?</h2>
-          <p>Send photos first or stop by the shop with your cards for an in-person review.</p>
+          <h2>Ready for a Pokémon collection review?</h2>
+          <p>
+            Send photos first,{" "}
+            <Link href="/sell-your-collection">Sell Pokémon Cards through a collection review</Link>,
+            or stop by the shop with your cards for an in-person review. You can also{" "}
+            <Link href="/visit-us">visit our Pokémon card shop in West Easton</Link> before coming in.
+          </p>
         </div>
         <Link className="button primary sell-cta" href="/sell-your-collection">
-          Sell Your Cards
+          Sell Pokémon Cards
         </Link>
       </section>
+      <FaqSection
+        title="Buy, Sell, and Trade FAQ"
+        intro="Helpful answers for local Pokémon collectors in Easton, West Easton, and the Lehigh Valley."
+        items={buySellTradeFaq}
+      />
     </main>
   );
 }

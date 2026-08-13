@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { FaqJsonLd, FaqSection, type FaqItem } from "../shared";
 import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact Let's Go Cards",
+  title: "Contact Let's Go Cards for Pokémon Cards in Easton PA",
   description:
-    "Contact Let's Go Cards in West Easton, Pennsylvania for Pokemon card buying, selling, trading, collection reviews, current hours, and soft opening details.",
+    "Contact Let's Go Cards in West Easton, PA about Pokémon cards, sealed products, PSA slabs, selling a collection, trades, current hours, and visits.",
   alternates: {
     canonical: "/contact"
   }
@@ -13,15 +15,41 @@ export const metadata: Metadata = {
 const googleBusinessProfileUrl =
   "https://www.google.com/search?q=Let%27s+Go+Cards+708A+East+Street+West+Easton+PA";
 
+const contactFaq: FaqItem[] = [
+  {
+    question: "What can I contact Let's Go Cards about?",
+    answer:
+      "You can contact Let's Go Cards about Pokémon singles, sealed Pokémon products, PSA graded cards, selling a collection, trade questions, handmade gifts, and planning a visit."
+  },
+  {
+    question: "Can I ask about selling before I bring cards in?",
+    answer:
+      "Yes. You can send a message or use the sell form with photos so the team can understand what you have before you visit."
+  },
+  {
+    question: "Where can I confirm current hours?",
+    answer:
+      "Please check the Let's Go Cards Google Business Profile for current store hours before visiting the West Easton shop."
+  },
+  {
+    question: "What payment options are available?",
+    answer:
+      "Payment options can vary during the soft opening period, so please ask in store or contact Let's Go Cards before visiting if you need a specific payment method."
+  }
+];
+
 export default function Contact() {
   return (
     <main>
+      <FaqJsonLd items={contactFaq} />
       <section className="page-hero compact">
         <p className="eyebrow">Now open in West Easton</p>
-        <h1>Contact</h1>
+        <h1>Contact Let&apos;s Go Cards</h1>
         <p>
           Questions about a collection, card availability, trades, or current hours? Call, email,
-          or stop by the shop in West Easton. Soft Opening — Saturday, August 15 at 4:00 PM.
+          or stop by the shop in West Easton. You can also{" "}
+          <Link href="/sell-your-collection">submit a collection review request</Link> before
+          visiting. Soft Opening — Saturday, August 15 at 4:00 PM.
         </p>
       </section>
       <section className="contact-layout">
@@ -63,6 +91,11 @@ export default function Contact() {
           />
         </aside>
       </section>
+      <FaqSection
+        title="Contact FAQ"
+        intro="Answers to common questions before you call, message, sell a collection, or visit."
+        items={contactFaq}
+      />
     </main>
   );
 }

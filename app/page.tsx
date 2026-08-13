@@ -1,5 +1,16 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { FaqJsonLd, FaqSection, type FaqItem } from "./shared";
+
+export const metadata: Metadata = {
+  title: "Pokémon Card Shop in Easton PA",
+  description:
+    "Visit Let's Go Cards in West Easton, PA for Pokémon singles, sealed products, PSA graded cards, collection reviews, trades, and family-friendly collecting.",
+  alternates: {
+    canonical: "/"
+  }
+};
 
 const whyChoose = [
   ["Family-Owned Business", "Built by Wes, Laurin, and Enzo for families and Pokémon collectors in the Lehigh Valley."],
@@ -28,6 +39,11 @@ const sparkyCards = [
     caption: "Ascended Heroes Pikachu PSA 10",
     src: "/featured-pikachu-psa10.jpeg",
     alt: "Ascended Heroes Pikachu ex Special Illustration Rare PSA 10 slab from Sparky's Collection"
+  },
+  {
+    caption: "Felt Hat Pikachu PSA 10",
+    src: "/featured-felt-hat-pikachu-psa10.jpeg",
+    alt: "Pikachu with Grey Felt Hat PSA 10 slab displayed by Let's Go Cards"
   }
 ];
 
@@ -45,16 +61,22 @@ const googleBusinessProfileUrl =
 
 const homepageActions = [
   {
-    title: "Shop Pokémon Products",
+    title: "Buy Pokémon Cards",
     text: "Shop Pokémon singles, PSA graded cards, sealed products, and kid-friendly collector picks.",
     href: "/buy-sell-trade",
-    label: "Shop"
+    label: "Buy"
   },
   {
-    title: "Sell Your Collection",
+    title: "Sell Pokémon Cards",
     text: "Get a fair, no-pressure review for one PSA card, sealed product, binders, or full collections.",
     href: "/sell-your-collection",
     label: "Sell"
+  },
+  {
+    title: "Trade Pokémon Cards",
+    text: "Talk through fair local trades based on condition, demand, and what each collector is looking for.",
+    href: "/buy-sell-trade",
+    label: "Trade"
   },
   {
     title: "Visit the Store",
@@ -70,9 +92,38 @@ const homepageActions = [
   }
 ];
 
+const homeFaq: FaqItem[] = [
+  {
+    question: "What kind of card shop is Let's Go Cards?",
+    answer:
+      "Let's Go Cards is a family-owned Pokémon specialty store in West Easton, Pennsylvania, serving collectors and families from Easton and across the Lehigh Valley."
+  },
+  {
+    question: "Can I buy Pokémon cards in the shop?",
+    answer:
+      "Yes. The shop focuses on Pokémon singles, PSA graded Pokémon cards, sealed Pokémon products, collector supplies, and Laurin's handmade Pokémon-themed merchandise and gifts."
+  },
+  {
+    question: "Do you buy Pokémon collections?",
+    answer:
+      "Yes. You can bring in a single PSA card, singles, sealed product, binders, vintage collections, or complete Pokémon collections for a clear, no-pressure review."
+  },
+  {
+    question: "Can kids and new collectors visit?",
+    answer:
+      "Absolutely. Let's Go Cards was created as a welcoming place for parents, kids, new collectors, and longtime Pokémon fans to enjoy the hobby together."
+  },
+  {
+    question: "Where can I find current store hours?",
+    answer:
+      "Please check the Let's Go Cards Google Business Profile for current store hours before visiting, especially during the soft opening period."
+  }
+];
+
 export default function Home() {
   return (
     <main>
+      <FaqJsonLd items={homeFaq} />
       <section className="coming-soon-banner">
         <div className="coming-soon-copy">
           <p className="eyebrow">Now open</p>
@@ -90,14 +141,22 @@ export default function Home() {
           <p>
             Conveniently located in West Easton, Pennsylvania, Let&apos;s Go Cards is being built
             for families, collectors, and kids who want a welcoming place where every shelf,
-            display case, trade conversation, and handmade gift is centered on Pokémon.
+            display case, trade conversation, and handmade gift is centered on Pokémon. Explore
+            our{" "}
+            <Link href="/buy-sell-trade">Buy, Sell &amp; Trade Pokémon Cards in Easton, PA</Link>{" "}
+            page, plan your{" "}
+            <Link href="/visit-us">store visit</Link>, or{" "}
+            <Link href="/contact">contact us</Link> with questions before stopping by.
           </p>
           <div className="button-row">
             <Link className="button primary" href="/buy-sell-trade">
-              Shop Pokémon Products
+              Buy Pokémon Cards
             </Link>
             <Link className="button secondary" href="/sell-your-collection">
-              Sell Your Collection
+              Sell Pokémon Cards
+            </Link>
+            <Link className="button secondary" href="/buy-sell-trade">
+              Trade Pokémon Cards
             </Link>
             <Link className="button secondary" href="/visit-us">
               Visit the Store
@@ -152,7 +211,8 @@ export default function Home() {
           <p>
             We are not trying to be every kind of card store. Our shelves, buying counter, and
             community are dedicated to Pokémon, which helps us create a better experience for
-            collectors, parents, and kids who love the same world we do.
+            collectors, parents, and kids who love the same world we do. Learn more{" "}
+            <Link href="/about-us">about the family behind Let&apos;s Go Cards</Link>.
           </p>
           <p>
             As Pokémon celebrates its 30th anniversary, the hobby is bringing generations together
@@ -182,7 +242,8 @@ export default function Home() {
           <p>
             Collectors can bring items to the store or submit photos for review. Cash offers,
             trade offers, and consignment opportunities may be available depending on the
-            collection.
+            collection. You can also{" "}
+            <Link href="/sell-your-collection">start a collection review online</Link>.
           </p>
         </div>
         <div className="what-we-buy-grid">
@@ -243,6 +304,12 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <FaqSection
+        title="Pokémon Card Shop FAQ"
+        intro="Quick answers for families and collectors planning a visit, looking to buy, or thinking about selling a Pokémon collection."
+        items={homeFaq}
+      />
 
       <section className="section sell-home">
         <div className="section-heading">

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { FaqJsonLd, FaqSection, type FaqItem } from "../shared";
 import { SellCollectionForm } from "./sell-collection-form";
 
 export const metadata: Metadata = {
-  title: "Sell Pokemon Cards in West Easton, PA",
+  title: "Sell Pokémon Cards & Collections in Lehigh Valley",
   description:
-    "Sell Pokemon singles, PSA slabs, sealed product, binders, and complete collections to Let's Go Cards in West Easton, PA. Fair cash offers, safe transactions, and no-pressure reviews.",
+    "Sell Pokémon singles, PSA slabs, sealed product, binders, and complete collections to Let's Go Cards in West Easton, PA. Fair cash offers and no-pressure reviews.",
   alternates: {
     canonical: "/sell-your-collection"
   }
@@ -19,15 +21,45 @@ const cardTypes = [
   "Complete collections"
 ];
 
+const sellFaq: FaqItem[] = [
+  {
+    question: "What Pokémon cards and collections do you buy?",
+    answer:
+      "Let's Go Cards reviews Pokémon singles, single PSA cards, PSA slabs, sealed Pokémon product, binders, vintage collections, and complete collections."
+  },
+  {
+    question: "Can I sell just one PSA graded Pokémon card?",
+    answer:
+      "Yes. We buy everything from one PSA graded Pokémon card to full collections when the card or collection is a good fit for the shop."
+  },
+  {
+    question: "Are collection reviews high pressure?",
+    answer:
+      "No. Collection reviews are professional and no pressure. We explain condition, demand, and offer options so you can decide what feels right."
+  },
+  {
+    question: "Can I get cash, trade, or consignment options?",
+    answer:
+      "Cash offers, trade offers, and consignment opportunities may be available depending on the collection, current demand, and what the shop can responsibly support."
+  },
+  {
+    question: "Should I send photos before visiting?",
+    answer:
+      "Photos are helpful, especially for larger collections, sealed products, and graded cards. You can submit the form, email photos, or bring the collection to the West Easton shop."
+  }
+];
+
 export default function SellYourCollection() {
   return (
     <main>
+      <FaqJsonLd items={sellFaq} />
       <section className="page-hero compact">
         <p className="eyebrow">Fair cash offers for Pokémon collections</p>
-        <h1>Sell Your Cards</h1>
+        <h1>Sell Pokémon Cards and Collections</h1>
         <p>
           Sell one PSA graded card, a binder, sealed Pokémon product, or an entire collection
-          through a safe, professional, no-pressure review with Let&apos;s Go Cards.
+          through a safe, professional, no-pressure review with Let&apos;s Go Cards in West Easton,
+          Pennsylvania.
         </p>
       </section>
 
@@ -40,6 +72,12 @@ export default function SellYourCollection() {
             specialty store focused on honest conversations, fair cash offers, and long-term
             relationships with collectors. Trade offers and consignment options may also be
             available depending on the collection.
+          </p>
+          <p>
+            Looking to trade instead of sell? Visit our{" "}
+            <Link href="/buy-sell-trade">Buy, Sell &amp; Trade Pokémon Cards in Easton, PA</Link>{" "}
+            page, or{" "}
+            <Link href="/contact">contact us</Link> with questions before bringing cards in.
           </p>
         </div>
         <div className="sell-type-grid">
@@ -79,6 +117,11 @@ export default function SellYourCollection() {
           </ul>
         </aside>
       </section>
+      <FaqSection
+        title="Selling Pokémon Cards FAQ"
+        intro="Clear answers for collectors in Easton, West Easton, and the Lehigh Valley who are thinking about selling Pokémon cards."
+        items={sellFaq}
+      />
     </main>
   );
 }

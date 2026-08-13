@@ -17,11 +17,11 @@ const siteUrl = "https://www.shopletsgocards.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "Let's Go Cards | Now Open Pokemon Card Shop in West Easton, PA",
+    default: "Pokémon Card Shop in Easton PA | Let's Go Cards",
     template: "%s | Let's Go Cards"
   },
   description:
-    "Let's Go Cards is a family-owned Pokemon specialty store now open in West Easton, PA. Soft Opening — Saturday, August 15 at 4:00 PM. Buy, sell, and trade Pokemon cards, PSA graded cards, sealed product, and collections.",
+    "Let's Go Cards is a family-owned Pokémon card shop in West Easton, PA for Pokémon singles, sealed products, PSA graded cards, trades, and collection reviews.",
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/"
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     icon: "/favicon.jpg"
   },
   openGraph: {
-    title: "Let's Go Cards | Now Open in West Easton, PA",
+    title: "Pokémon Card Shop in Easton PA | Let's Go Cards",
     description:
-      "Family-owned Pokemon specialty store now open in West Easton, PA. Soft Opening — Saturday, August 15 at 4:00 PM.",
+      "Family-owned Pokémon specialty store in West Easton, PA for singles, sealed products, PSA graded cards, trades, and collection reviews.",
     url: siteUrl,
     siteName: "Let's Go Cards",
     images: [
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Let's Go Cards | Now Open in West Easton, PA",
+    title: "Pokémon Card Shop in Easton PA | Let's Go Cards",
     description:
-      "Family-owned Pokemon specialty store now open in West Easton, PA. Soft Opening — Saturday, August 15 at 4:00 PM.",
+      "Family-owned Pokémon specialty store in West Easton, PA for singles, sealed products, PSA graded cards, trades, and collection reviews.",
     images: ["/logo.jpg"]
   }
 };
@@ -73,7 +73,7 @@ const localBusinessSchema = {
   image: `${siteUrl}/logo.jpg`,
   logo: `${siteUrl}/logo.jpg`,
   description:
-    "Family-owned Pokemon specialty store now open in West Easton, Pennsylvania, offering Pokemon cards, PSA graded cards, sealed product, collection reviews, buying, selling, and trading.",
+    "Family-owned Pokémon specialty store in West Easton, Pennsylvania, offering Pokémon singles, PSA graded cards, sealed Pokémon products, collection reviews, buying, selling, trading, and handmade Pokémon-themed gifts.",
   telephone: "+1-484-261-1453",
   email: "ShopLetsGoCards@gmail.com",
   address: {
@@ -88,8 +88,12 @@ const localBusinessSchema = {
     "West Easton PA",
     "Easton PA",
     "Lehigh Valley PA",
-    "Northampton County PA"
+    "Northampton County PA",
+    "Phillipsburg NJ",
+    "Bethlehem PA"
   ],
+  hasMap:
+    "https://www.google.com/maps?q=708A%20East%20Street%2C%20West%20Easton%2C%20PA%2018042",
   priceRange: "$$",
   sameAs: ["https://www.facebook.com/share/1EELuF6yk5/?mibextid=wwXIfr"],
   makesOffer: [
@@ -97,21 +101,42 @@ const localBusinessSchema = {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "Buy Pokemon cards"
+        name: "Buy Pokémon cards"
       }
     },
     {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "Sell Pokemon card collections"
+        name: "Sell Pokémon card collections"
       }
     },
     {
       "@type": "Offer",
       itemOffered: {
         "@type": "Service",
-        name: "Trade Pokemon cards"
+        name: "Trade Pokémon cards"
+      }
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Product",
+        name: "Pokémon sealed products"
+      }
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Product",
+        name: "PSA graded Pokémon cards"
+      }
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Product",
+        name: "Handmade Pokémon-themed merchandise and gifts"
       }
     }
   ]
@@ -155,7 +180,7 @@ export default function RootLayout({
             <Image
               className="brand-logo"
               src="/logo.jpg"
-              alt="Let's Go Cards"
+              alt="Let's Go Cards Pokémon card shop logo"
               width={1320}
               height={1660}
               priority
@@ -180,12 +205,12 @@ export default function RootLayout({
               <Image
                 className="footer-logo"
                 src="/logo.jpg"
-                alt="Let's Go Cards"
+                alt="Let's Go Cards Pokémon card shop logo"
                 width={1320}
                 height={1660}
               />
             </Link>
-            <p>Buying, selling, and trading Pokemon cards in West Easton, Pennsylvania.</p>
+            <p>Buying, selling, and trading Pokémon cards in West Easton, Pennsylvania.</p>
           </div>
           <div className="footer-grid">
             <span>708A East Street, West Easton, PA 18042</span>
