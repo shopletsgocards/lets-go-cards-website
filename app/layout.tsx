@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
+  verification: {
+    google: "aa4WYQq2R4Pdi2KtBV4o7gjtVsxHA3tI3Xz0TGGdCsc"
+  },
   applicationName: "Let's Go Cards",
   keywords: [
     "Pokemon card shop West Easton PA",
