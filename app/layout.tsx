@@ -17,11 +17,11 @@ const siteUrl = "https://www.shopletsgocards.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "Let's Go Cards | Pokemon Card Shop in West Easton, PA",
+    default: "Let's Go Cards | Now Open Pokemon Card Shop in West Easton, PA",
     template: "%s | Let's Go Cards"
   },
   description:
-    "Let's Go Cards is a family-owned Pokemon card shop opening soon in West Easton, PA. Buy, sell, and trade Pokemon cards, PSA graded cards, sealed product, and collections.",
+    "Let's Go Cards is a family-owned Pokemon specialty store now open in West Easton, PA. Soft Opening — Saturday, August 15 at 4:00 PM. Buy, sell, and trade Pokemon cards, PSA graded cards, sealed product, and collections.",
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/"
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     icon: "/favicon.jpg"
   },
   openGraph: {
-    title: "Let's Go Cards | Pokemon Card Shop in West Easton, PA",
+    title: "Let's Go Cards | Now Open in West Easton, PA",
     description:
-      "Family-owned Pokemon card shop opening soon in West Easton, PA for buying, selling, trading, PSA graded cards, sealed product, and collections.",
+      "Family-owned Pokemon specialty store now open in West Easton, PA. Soft Opening — Saturday, August 15 at 4:00 PM.",
     url: siteUrl,
     siteName: "Let's Go Cards",
     images: [
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Let's Go Cards | Pokemon Card Shop in West Easton, PA",
+    title: "Let's Go Cards | Now Open in West Easton, PA",
     description:
-      "Family-owned Pokemon card shop opening soon in West Easton, PA for buying, selling, trading, PSA graded cards, sealed product, and collections.",
+      "Family-owned Pokemon specialty store now open in West Easton, PA. Soft Opening — Saturday, August 15 at 4:00 PM.",
     images: ["/logo.jpg"]
   }
 };
@@ -73,7 +73,7 @@ const localBusinessSchema = {
   image: `${siteUrl}/logo.jpg`,
   logo: `${siteUrl}/logo.jpg`,
   description:
-    "Family-owned Pokemon card shop opening soon in West Easton, Pennsylvania, offering Pokemon cards, PSA graded cards, sealed product, collection reviews, buying, selling, and trading.",
+    "Family-owned Pokemon specialty store now open in West Easton, Pennsylvania, offering Pokemon cards, PSA graded cards, sealed product, collection reviews, buying, selling, and trading.",
   telephone: "+1-484-261-1453",
   email: "ShopLetsGoCards@gmail.com",
   address: {

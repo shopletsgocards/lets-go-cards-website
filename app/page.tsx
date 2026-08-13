@@ -40,15 +40,8 @@ const whatWeBuy = [
   "Complete Collections"
 ];
 
-const storeHours = [
-  ["Monday", "Hours coming soon"],
-  ["Tuesday", "Hours coming soon"],
-  ["Wednesday", "Hours coming soon"],
-  ["Thursday", "Hours coming soon"],
-  ["Friday", "Hours coming soon"],
-  ["Saturday", "Hours coming soon"],
-  ["Sunday", "Hours coming soon"]
-];
+const googleBusinessProfileUrl =
+  "https://www.google.com/search?q=Let%27s+Go+Cards+708A+East+Street+West+Easton+PA";
 
 const homepageActions = [
   {
@@ -82,11 +75,12 @@ export default function Home() {
     <main>
       <section className="coming-soon-banner">
         <div className="coming-soon-copy">
-          <p className="eyebrow">Opening update</p>
-          <h2>COMING SOON TO WEST EASTON</h2>
+          <p className="eyebrow">Now open</p>
+          <h2>NOW OPEN IN WEST EASTON</h2>
+          <p className="coming-soon-line">Soft Opening — Saturday, August 15 at 4:00 PM.</p>
           <p>
-            Let&apos;s Go Cards is a family-owned Pokémon specialty store opening soon in West
-            Easton, Pennsylvania.
+            Let&apos;s Go Cards is a family-owned Pokémon specialty store now open in West Easton,
+            Pennsylvania.
           </p>
           <h1>The Lehigh Valley&apos;s Family-Friendly Pokémon Destination</h1>
           <p className="coming-soon-line">
@@ -177,7 +171,7 @@ export default function Home() {
           <span>Enzo</span>
         </div>
         <div className="storefront-placeholder">
-          <span>Storefront photo coming soon.</span>
+          <span>Storefront photo to be added after soft opening.</span>
         </div>
       </section>
 
@@ -270,8 +264,8 @@ export default function Home() {
           <p className="eyebrow">Visit the shop</p>
           <h2>Visit Let&apos;s Go Cards</h2>
           <p>
-            Let&apos;s Go Cards is located at 708A East Street, West Easton, PA 18042. Placeholder
-            hours are listed below and can be updated when the final schedule is ready.
+            Let&apos;s Go Cards is located at 708A East Street, West Easton, PA 18042. For current
+            store hours, please check our Google Business Profile before visiting.
           </p>
         </div>
         <div className="visit-grid">
@@ -293,15 +287,14 @@ export default function Home() {
               </p>
             </div>
             <div className="hours-card">
-              <h3>Hours</h3>
-              <dl>
-                {storeHours.map(([day, hours]) => (
-                  <div key={day}>
-                    <dt>{day}</dt>
-                    <dd>{hours}</dd>
-                  </div>
-                ))}
-              </dl>
+              <h3>Current Hours</h3>
+              <p>
+                Store hours may change during the soft opening period. Please check our Google
+                Business Profile for the most current hours before stopping by.
+              </p>
+              <a href={googleBusinessProfileUrl} target="_blank" rel="noopener noreferrer">
+                View Current Hours on Google
+              </a>
             </div>
           </div>
           <iframe

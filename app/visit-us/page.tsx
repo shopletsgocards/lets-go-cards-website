@@ -3,39 +3,33 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Visit Let's Go Cards in West Easton, PA",
   description:
-    "Visit Let's Go Cards at 708A East Street in West Easton, Pennsylvania for Pokemon cards, PSA slabs, sealed product, trades, and collection reviews.",
+    "Visit Let's Go Cards, now open at 708A East Street in West Easton, Pennsylvania for Pokemon cards, PSA slabs, sealed product, trades, and collection reviews.",
   alternates: {
     canonical: "/visit-us"
   }
 };
 
-const storeHours = [
-  ["Monday", "Hours coming soon"],
-  ["Tuesday", "Hours coming soon"],
-  ["Wednesday", "Hours coming soon"],
-  ["Thursday", "Hours coming soon"],
-  ["Friday", "Hours coming soon"],
-  ["Saturday", "Hours coming soon"],
-  ["Sunday", "Hours coming soon"]
-];
+const googleBusinessProfileUrl =
+  "https://www.google.com/search?q=Let%27s+Go+Cards+708A+East+Street+West+Easton+PA";
 
 const visitHighlights = [
   ["Shop Pokemon cards", "Browse singles, slabs, sealed product, and collector supplies."],
   ["Bring your collection", "Stop in with binders, slabs, sealed boxes, or full collections."],
   ["Trade locally", "Talk through condition, demand, and fair trade options at the counter."],
-  ["Parking Information", "Parking information placeholder. Final parking details can be added here."],
-  ["Store Hours", "Store hours placeholder. Final weekly hours can be added when ready."]
+  ["Soft Opening", "Soft Opening — Saturday, August 15 at 4:00 PM."],
+  ["Current Hours", "Please check our Google Business Profile for current store hours before visiting."]
 ];
 
 export default function VisitUs() {
   return (
     <main>
       <section className="page-hero compact">
-        <p className="eyebrow">West Easton card shop</p>
+        <p className="eyebrow">Now open in West Easton</p>
         <h1>Visit Us</h1>
         <p>
-          Stop by Let&apos;s Go Cards for Pokemon singles, PSA slabs, sealed product, collection
-          reviews, and friendly help from local collectors.
+          Let&apos;s Go Cards is now open for Pokemon singles, PSA slabs, sealed product,
+          collection reviews, and friendly help from local collectors. Soft Opening — Saturday,
+          August 15 at 4:00 PM.
         </p>
       </section>
 
@@ -64,22 +58,21 @@ export default function VisitUs() {
           </div>
         </div>
         <aside className="hours-card">
-          <h2>Hours</h2>
-          <dl>
-            {storeHours.map(([day, hours]) => (
-              <div key={day}>
-                <dt>{day}</dt>
-                <dd>{hours}</dd>
-              </div>
-            ))}
-          </dl>
+          <h2>Current Hours</h2>
+          <p>
+            Store hours may change during the soft opening period. Please check our Google Business
+            Profile for the most current hours before visiting.
+          </p>
+          <a href={googleBusinessProfileUrl} target="_blank" rel="noopener noreferrer">
+            View Current Hours on Google
+          </a>
         </aside>
         <div className="map-placeholder-label">
-          <p className="eyebrow">Google Map placeholder</p>
+          <p className="eyebrow">Google Map</p>
           <h2>Find the shop</h2>
           <p>
-            The embedded map below marks the store location. It can be replaced or adjusted if the
-            final map embed changes.
+            The embedded map below marks the store location. For the latest hours and profile
+            details, visit our Google Business Profile.
           </p>
         </div>
         <iframe

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Let's Go Cards",
   description:
-    "Meet Wes, Laurin, and Enzo, the family behind Let's Go Cards, the Lehigh Valley's Pokemon specialty store opening soon in West Easton, PA.",
+    "Meet Wes, Laurin, and Enzo, the family behind Let's Go Cards, the Lehigh Valley's Pokemon specialty store now open in West Easton, PA.",
   alternates: {
     canonical: "/about-us"
   }
@@ -13,11 +13,12 @@ export default function AboutUs() {
   return (
     <main>
       <section className="page-hero">
-        <p className="eyebrow">Lehigh Valley Pokémon destination</p>
+        <p className="eyebrow">Now open in West Easton</p>
         <h1>About Let&apos;s Go Cards</h1>
         <p>
           Founded by Wes, Laurin, and Enzo, Let&apos;s Go Cards is a Pokémon specialty store built
           around collecting, community, family, and the joy of sharing the hobby across generations.
+          Soft Opening — Saturday, August 15 at 4:00 PM.
         </p>
       </section>
       <section className="story-section">
