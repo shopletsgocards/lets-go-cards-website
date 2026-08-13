@@ -42,10 +42,11 @@ const featuredCards = [
   {
     title: "Felt Hat Pikachu PSA 10",
     caption: "Felt Hat Pikachu PSA 10",
-    note: "Coming Soon",
     description:
-      "A future display-piece addition planned for Sparky's Collection as the gallery grows.",
-    highlight: "Coming Soon"
+      "A playful Van Gogh Museum-inspired promo with a gem mint PSA 10 grade and instant display-case charm.",
+    highlight: "Featured promo",
+    src: "/featured-felt-hat-pikachu-psa10.jpeg",
+    alt: "Pikachu with Grey Felt Hat PSA 10 slab from Sparky's Collection"
   },
   {
     title: "Bubble Mew PSA 10",
