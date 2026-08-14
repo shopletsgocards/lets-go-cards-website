@@ -4,17 +4,41 @@ import Link from "next/link";
 import { FaqJsonLd, FaqSection, type FaqItem } from "../shared";
 
 export const metadata: Metadata = {
-  title: "PSA Pokémon Card Gallery | Sparky's Collection",
+  title: "PSA-Graded Pokémon Grail Cards in Easton PA | Sparky's Collection",
   description:
-    "Explore Sparky's Collection at Let's Go Cards, a PSA Pokémon card gallery featuring Moonbreon PSA 10, Gengar VMAX PSA 10, Pikachu slabs, and family favorites.",
+    "Explore Sparky's Collection at Let's Go Cards in West Easton, PA: PSA 10 Pokémon grail cards including Moonbreon, Gengar VMAX, Giratina V, Umbreon ex, and Pikachu favorites.",
   alternates: {
     canonical: "/sparkys-collection"
+  },
+  openGraph: {
+    title: "PSA-Graded Pokémon Grail Cards in Easton PA | Sparky's Collection",
+    description:
+      "See PSA 10 Pokémon grail cards from Sparky's Collection at Let's Go Cards in West Easton, serving Easton and the Lehigh Valley.",
+    url: "/sparkys-collection",
+    images: [
+      {
+        url: "/2021-umbreon-vmax-moonbreon-215-203-evolving-skies-psa10.jpeg",
+        width: 900,
+        height: 1700,
+        alt: "Umbreon VMAX Moonbreon PSA 10 from Sparky's Collection"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PSA-Graded Pokémon Grail Cards | Sparky's Collection",
+    description:
+      "Explore Moonbreon, Gengar VMAX, Pikachu, Umbreon ex, and Giratina V PSA cards from Let's Go Cards in West Easton.",
+    images: ["/2021-umbreon-vmax-moonbreon-215-203-evolving-skies-psa10.jpeg"]
   }
 };
+
+const siteUrl = "https://www.shopletsgocards.com";
 
 const featuredCards = [
   {
     title: "2021 — Umbreon VMAX “Moonbreon” #215/203 — Evolving Skies — PSA 10",
+    slug: "umbreon-vmax-moonbreon-215-203-evolving-skies-psa-10",
     caption: "Umbreon VMAX “Moonbreon”",
     facts: [
       ["Release year", "2021"],
@@ -25,14 +49,15 @@ const featuredCards = [
       ["Grade", "PSA Gem Mint 10"]
     ],
     description:
-      "A modern chase-card centerpiece with dramatic night-sky artwork and the kind of display presence collectors remember immediately.",
+      "A 2021 Umbreon VMAX “Moonbreon” #215/203 from Evolving Skies in PSA Gem Mint 10, loved by collectors for its alternate-art secret rare artwork, moonlit scene, and centerpiece display presence.",
     highlight: "Featured grail",
     psaCert: "63551640",
-    src: "/featured-moonbreon-psa10.jpeg",
-    alt: "2021 Umbreon VMAX Moonbreon number 215/203 from Evolving Skies graded PSA Gem Mint 10"
+    src: "/2021-umbreon-vmax-moonbreon-215-203-evolving-skies-psa10.jpeg",
+    alt: "2021 Umbreon VMAX Moonbreon #215/203 Evolving Skies Alternate Art Secret Rare graded PSA Gem Mint 10"
   },
   {
     title: "2021 — Gengar VMAX #271/264 — Fusion Strike Alternate Art — PSA 10",
+    slug: "gengar-vmax-271-264-fusion-strike-alternate-art-psa-10",
     caption: "Gengar VMAX Alternate Art",
     facts: [
       ["Release year", "2021"],
@@ -43,14 +68,15 @@ const featuredCards = [
       ["Grade", "PSA Gem Mint 10"]
     ],
     description:
-      "A fan-favorite Gigantamax Gengar card with playful, oversized artwork that makes it one of the most recognizable modern alternate arts.",
+      "A 2021 Gengar VMAX #271/264 from Fusion Strike in PSA Gem Mint 10, a special full art alternate-art favorite with oversized Gigantamax artwork and unmistakable collector appeal.",
     highlight: "Collector favorite",
     psaCert: "151290074",
-    src: "/featured-gengar-vmax-psa10.jpeg",
-    alt: "2021 Gengar VMAX number 271/264 from Fusion Strike Alternate Art graded PSA Gem Mint 10"
+    src: "/2021-gengar-vmax-271-264-fusion-strike-alternate-art-psa10.jpeg",
+    alt: "2021 Gengar VMAX #271/264 Fusion Strike Special Full Art Alternate Art graded PSA Gem Mint 10"
   },
   {
     title: "2026 — Pikachu ex #276/217 — Ascended Heroes — PSA 10",
+    slug: "pikachu-ex-276-217-ascended-heroes-special-illustration-rare-psa-10",
     caption: "Pikachu ex Special Illustration Rare",
     facts: [
       ["Release year", "2026"],
@@ -62,14 +88,15 @@ const featuredCards = [
     ],
     note: "Pulled by Enzo",
     description:
-      "A personal family highlight because Enzo pulled it himself before it earned a gem mint grade.",
+      "A 2026 Pikachu ex #276/217 from Ascended Heroes in PSA Gem Mint 10, made even more special because Enzo pulled this Special Illustration Rare before it became a family showcase slab.",
     highlight: "Pulled by Enzo",
     psaCert: "158529741",
-    src: "/featured-pikachu-psa10.jpeg",
-    alt: "2026 Pikachu ex number 276/217 from Ascended Heroes Special Illustration Rare graded PSA Gem Mint 10"
+    src: "/2026-pikachu-ex-276-217-ascended-heroes-special-illustration-rare-psa10.jpeg",
+    alt: "2026 Pikachu ex #276/217 Ascended Heroes Special Illustration Rare graded PSA Gem Mint 10"
   },
   {
     title: "2023 — Pikachu with Grey Felt Hat #085 — SVP Black Star Promo — PSA 10",
+    slug: "pikachu-with-grey-felt-hat-085-svp-black-star-promo-psa-10",
     caption: "Pikachu with Grey Felt Hat",
     facts: [
       ["Release year", "2023"],
@@ -80,14 +107,15 @@ const featuredCards = [
       ["Grade", "PSA Gem Mint 10"]
     ],
     description:
-      "A charming Pokémon x Van Gogh promo that blends Pikachu’s personality with museum-inspired artwork and instant display-case appeal.",
+      "A 2023 Pikachu with Grey Felt Hat #085 SVP Black Star Promo in PSA Gem Mint 10, connecting Pokémon collecting with Van Gogh-inspired artwork and a memorable promotional release.",
     highlight: "Featured promo",
     psaCert: "108806405",
-    src: "/featured-felt-hat-pikachu-psa10.jpeg",
-    alt: "2023 Pikachu with Grey Felt Hat number 085 SVP Black Star Promo graded PSA Gem Mint 10"
+    src: "/2023-pikachu-with-grey-felt-hat-085-svp-black-star-promo-psa10.jpeg",
+    alt: "2023 Pikachu with Grey Felt Hat #085 SVP Black Star Promo graded PSA Gem Mint 10"
   },
   {
     title: "2025 — Umbreon ex #161/131 — Prismatic Evolutions — PSA 10",
+    slug: "umbreon-ex-161-131-prismatic-evolutions-special-illustration-rare-psa-10",
     caption: "Umbreon ex Special Illustration Rare",
     facts: [
       ["Release year", "2025"],
@@ -98,14 +126,15 @@ const featuredCards = [
       ["Grade", "PSA Gem Mint 10"]
     ],
     description:
-      "A Prismatic Evolutions chase card showcased in a matching custom extended-art frame that turns the slab into a dramatic display piece.",
+      "A 2025 Umbreon ex #161/131 from Prismatic Evolutions in PSA Gem Mint 10, shown in a matching custom extended-art frame that gives this Special Illustration Rare a dramatic gallery feel.",
     highlight: "Extended-art display",
     psaCert: "115774888",
-    src: "/sparkys-collection-umbreon-ex-prismatic-evolutions-psa10.jpeg",
-    alt: "2025 Umbreon ex number 161/131 from Prismatic Evolutions Special Illustration Rare graded PSA Gem Mint 10 in a custom extended-art display frame"
+    src: "/2025-umbreon-ex-161-131-prismatic-evolutions-special-illustration-rare-psa10.jpeg",
+    alt: "2025 Umbreon ex #161/131 Prismatic Evolutions Special Illustration Rare graded PSA Gem Mint 10 in a custom extended-art display frame"
   },
   {
     title: "2022 — Giratina V #186/196 — Lost Origin Alternate Art — PSA 10",
+    slug: "giratina-v-186-196-lost-origin-alternate-art-psa-10",
     caption: "Giratina V Alternate Art",
     facts: [
       ["Release year", "2022"],
@@ -116,14 +145,15 @@ const featuredCards = [
       ["Grade", "PSA Gem Mint 10"]
     ],
     description:
-      "A Lost Origin standout with Shinji Kanda’s Distortion World artwork, paired with a matching custom extended-art frame for the collection.",
+      "A 2022 Giratina V #186/196 from Lost Origin in PSA Gem Mint 10, a special full art alternate-art favorite with Shinji Kanda’s Distortion World artwork and a matching custom extended-art display frame.",
     highlight: "Extended-art display",
     psaCert: "91575323",
-    src: "/sparkys-collection-giratina-v-lost-origin-psa10.jpeg",
-    alt: "2022 Giratina V number 186/196 from Lost Origin Alternate Art graded PSA Gem Mint 10 in a custom extended-art display frame"
+    src: "/2022-giratina-v-186-196-lost-origin-alternate-art-psa10.jpeg",
+    alt: "2022 Giratina V #186/196 Lost Origin Special Full Art Alternate Art graded PSA Gem Mint 10 in a custom extended-art display frame"
   },
   {
     title: "2024 — Mew ex “Bubble Mew” #232/091 — Paldean Fates — PSA 10 Goal",
+    slug: "mew-ex-bubble-mew-232-091-paldean-fates-psa-10-goal",
     caption: "Mew ex “Bubble Mew”",
     facts: [
       ["Release year", "2024"],
@@ -135,15 +165,15 @@ const featuredCards = [
     ],
     note: "Future Collection Goal",
     description:
-      "A bright, joyful dream-list card that would add a playful modern Mew centerpiece to Sparky's Collection.",
+      "A 2024 Mew ex “Bubble Mew” #232/091 from Paldean Fates is a future PSA 10 goal for Sparky's Collection, chosen for its joyful Special Illustration Rare artwork and modern grail-card charm.",
     highlight: "Future Goal"
   }
 ];
 
 const collectionHighlights = [
-  ["Family favorites", "Cards with stories behind them, including pulls, trades, and milestone grades."],
-  ["Premium PSA slabs", "Gem mint display cards that show why condition and eye appeal matter."],
-  ["Growing gallery", "Sparky's Collection will keep expanding as new grails and shop favorites arrive."]
+  ["Family favorites", "Cards with stories behind them, including pulls, trades, PSA grades, and pieces visitors can ask about when they stop by the shop."],
+  ["Premium PSA slabs", "Gem mint Pokémon cards that show why condition, eye appeal, and verified certification matter to collectors."],
+  ["Growing gallery", "Sparky's Collection will keep expanding as new Pokémon grail cards, family favorites, and shop conversation pieces arrive."]
 ];
 
 const sparkyFaq: FaqItem[] = [
@@ -164,17 +194,71 @@ const sparkyFaq: FaqItem[] = [
   }
 ];
 
+const collectionPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${siteUrl}/sparkys-collection#collectionpage`,
+  url: `${siteUrl}/sparkys-collection`,
+  name: "Sparky's Collection: PSA-Graded Pokémon Grail Cards",
+  description:
+    "A collector gallery from Let's Go Cards in West Easton, PA featuring PSA-graded Pokémon grail cards, family favorites, and showcase slabs.",
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Let's Go Cards",
+    url: siteUrl
+  },
+  about: [
+    "PSA graded Pokémon cards",
+    "Pokémon grail cards",
+    "Pokémon card collecting in Easton PA",
+    "Lehigh Valley Pokémon collectors"
+  ],
+  mainEntity: {
+    "@type": "ItemList",
+    name: "Sparky's Collection featured PSA Pokémon cards",
+    itemListElement: featuredCards.map((card, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      url: `${siteUrl}/sparkys-collection#${card.slug}`,
+      item: {
+        "@type": "CreativeWork",
+        name: card.title,
+        description: card.description,
+        image: card.src ? `${siteUrl}${card.src}` : undefined,
+        identifier: card.psaCert ? `PSA ${card.psaCert}` : card.caption,
+        sameAs: card.psaCert ? `https://www.psacard.com/cert/${card.psaCert}` : undefined,
+        isPartOf: {
+          "@type": "Collection",
+          name: "Sparky's Collection"
+        }
+      }
+    }))
+  }
+};
+
 export default function SparkysCollection() {
   return (
     <main>
       <FaqJsonLd items={sparkyFaq} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collectionPageSchema).replace(/</g, "\\u003c")
+        }}
+      />
       <section className="page-hero sparky-page-hero">
         <div>
-          <p className="eyebrow">PSA Pokémon card gallery</p>
+          <p className="eyebrow">PSA-graded Pokémon card gallery in West Easton</p>
           <h1>Sparky&apos;s Collection</h1>
           <p>
-            A curated showcase of memorable PSA cards, family favorites, and premium pieces from
-            the Let&apos;s Go Cards collection in West Easton.
+            A curated showcase of PSA-graded Pokémon grail cards, family favorites, and premium
+            slabs from Let&apos;s Go Cards in West Easton, serving collectors throughout Easton and
+            the Lehigh Valley.
+          </p>
+          <p>
+            Enjoy the gallery, then <Link href="/visit-us">visit the shop</Link>,{" "}
+            <Link href="/buy-sell-trade">buy, sell, or trade Pokémon cards</Link>, or{" "}
+            <Link href="/sell-your-collection">start a collection review</Link>.
           </p>
         </div>
         <Image
@@ -212,15 +296,15 @@ export default function SparkysCollection() {
       <section className="section museum-gallery">
         <div className="section-heading centered-heading">
           <p className="eyebrow">Featured from Sparky&apos;s Collection</p>
-          <h2>Premium PSA Card Gallery</h2>
+          <h2>PSA-Graded Pokémon Grail Cards</h2>
           <p>
-            Displayed like a small museum case: no prices, just standout cards, family stories, and
-            the thrill of collecting.
+            Displayed like a small museum case: no prices, just verified PSA slabs, full card
+            details, standout artwork, family stories, and the thrill of collecting.
           </p>
         </div>
         <div className="museum-card-grid">
           {featuredCards.map((card) => (
-            <article className="museum-card" key={card.title}>
+            <article className="museum-card" id={card.slug} key={card.title}>
               <div className="museum-card-light">
                 {card.src && card.alt ? (
                   <Image
@@ -273,7 +357,9 @@ export default function SparkysCollection() {
           <h2>What makes Sparky&apos;s Collection special</h2>
           <p>
             The gallery is part showcase, part family scrapbook, and part inspiration board for
-            collectors visiting the shop.
+            collectors visiting the shop. Looking for something similar?{" "}
+            <Link href="/contact">Contact us</Link> or{" "}
+            <Link href="/buy-sell-trade">learn how we buy, sell, and trade Pokémon cards</Link>.
           </p>
         </div>
         <div className="collection-highlight-grid">

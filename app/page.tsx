@@ -27,23 +27,23 @@ const whyChoose = [
 const sparkyCards = [
   {
     caption: "Moonbreon PSA 10",
-    src: "/featured-moonbreon-psa10.jpeg",
-    alt: "Umbreon VMAX PSA 10 slab from Sparky's Collection"
+    src: "/2021-umbreon-vmax-moonbreon-215-203-evolving-skies-psa10.jpeg",
+    alt: "Umbreon VMAX Moonbreon #215/203 Evolving Skies PSA 10 slab from Sparky's Collection"
   },
   {
     caption: "Gengar VMAX PSA 10",
-    src: "/featured-gengar-vmax-psa10.jpeg",
-    alt: "Gengar VMAX PSA 10 slab from Sparky's Collection"
+    src: "/2021-gengar-vmax-271-264-fusion-strike-alternate-art-psa10.jpeg",
+    alt: "Gengar VMAX #271/264 Fusion Strike Alternate Art PSA 10 slab from Sparky's Collection"
   },
   {
     caption: "Ascended Heroes Pikachu PSA 10",
-    src: "/featured-pikachu-psa10.jpeg",
-    alt: "Ascended Heroes Pikachu ex Special Illustration Rare PSA 10 slab from Sparky's Collection"
+    src: "/2026-pikachu-ex-276-217-ascended-heroes-special-illustration-rare-psa10.jpeg",
+    alt: "Ascended Heroes Pikachu ex #276/217 Special Illustration Rare PSA 10 slab from Sparky's Collection"
   },
   {
     caption: "Felt Hat Pikachu PSA 10",
-    src: "/featured-felt-hat-pikachu-psa10.jpeg",
-    alt: "Pikachu with Grey Felt Hat PSA 10 slab displayed by Let's Go Cards"
+    src: "/2023-pikachu-with-grey-felt-hat-085-svp-black-star-promo-psa10.jpeg",
+    alt: "Pikachu with Grey Felt Hat #085 SVP Black Star Promo PSA 10 slab displayed by Let's Go Cards"
   }
 ];
 
