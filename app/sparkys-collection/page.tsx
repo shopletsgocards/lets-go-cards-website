@@ -14,72 +14,128 @@ export const metadata: Metadata = {
 
 const featuredCards = [
   {
-    title: "Moonbreon PSA 10",
-    caption: "Moonbreon PSA 10",
+    title: "2021 — Umbreon VMAX “Moonbreon” #215/203 — Evolving Skies — PSA 10",
+    caption: "Umbreon VMAX “Moonbreon”",
+    facts: [
+      ["Release year", "2021"],
+      ["Card name", "Umbreon VMAX “Moonbreon”"],
+      ["Card number", "#215/203"],
+      ["Set", "Evolving Skies"],
+      ["Rarity / treatment", "Alternate Art Secret Rare"],
+      ["Grade", "PSA Gem Mint 10"]
+    ],
     description:
-      "A centerpiece modern grail with dramatic artwork, huge collector demand, and a gem mint PSA 10 grade.",
+      "A modern chase-card centerpiece with dramatic night-sky artwork and the kind of display presence collectors remember immediately.",
     highlight: "Featured grail",
     psaCert: "63551640",
     src: "/featured-moonbreon-psa10.jpeg",
-    alt: "Umbreon VMAX PSA 10 Moonbreon slab from Sparky's Collection"
+    alt: "2021 Umbreon VMAX Moonbreon number 215/203 from Evolving Skies graded PSA Gem Mint 10"
   },
   {
-    title: "Gengar VMAX PSA 10",
-    caption: "Gengar VMAX PSA 10",
+    title: "2021 — Gengar VMAX #271/264 — Fusion Strike Alternate Art — PSA 10",
+    caption: "Gengar VMAX Alternate Art",
+    facts: [
+      ["Release year", "2021"],
+      ["Card name", "Gengar VMAX"],
+      ["Card number", "#271/264"],
+      ["Set", "Fusion Strike"],
+      ["Rarity / treatment", "Special Full Art / Alternate Art"],
+      ["Grade", "PSA Gem Mint 10"]
+    ],
     description:
-      "A bold alternate-art favorite with standout color, playful energy, and display-case appeal.",
+      "A fan-favorite Gigantamax Gengar card with playful, oversized artwork that makes it one of the most recognizable modern alternate arts.",
     highlight: "Collector favorite",
     psaCert: "151290074",
     src: "/featured-gengar-vmax-psa10.jpeg",
-    alt: "Gengar VMAX PSA 10 slab from Sparky's Collection"
+    alt: "2021 Gengar VMAX number 271/264 from Fusion Strike Alternate Art graded PSA Gem Mint 10"
   },
   {
-    title: "Ascended Heroes Pikachu ex Special Illustration Rare PSA 10",
-    caption: "Ascended Heroes Pikachu ex PSA 10",
+    title: "2026 — Pikachu ex #276/217 — Ascended Heroes — PSA 10",
+    caption: "Pikachu ex Special Illustration Rare",
+    facts: [
+      ["Release year", "2026"],
+      ["Card name", "Pikachu ex"],
+      ["Card number", "#276/217"],
+      ["Set", "Ascended Heroes"],
+      ["Rarity / treatment", "Special Illustration Rare"],
+      ["Grade", "PSA Gem Mint 10"]
+    ],
     note: "Pulled by Enzo",
     description:
-      "A family favorite because Enzo pulled it himself before it earned a PSA 10 grade.",
+      "A personal family highlight because Enzo pulled it himself before it earned a gem mint grade.",
     highlight: "Pulled by Enzo",
     psaCert: "158529741",
     src: "/featured-pikachu-psa10.jpeg",
-    alt: "Ascended Heroes Pikachu ex Special Illustration Rare PSA 10 slab from Sparky's Collection"
+    alt: "2026 Pikachu ex number 276/217 from Ascended Heroes Special Illustration Rare graded PSA Gem Mint 10"
   },
   {
-    title: "Felt Hat Pikachu PSA 10",
-    caption: "Felt Hat Pikachu PSA 10",
+    title: "2023 — Pikachu with Grey Felt Hat #085 — SVP Black Star Promo — PSA 10",
+    caption: "Pikachu with Grey Felt Hat",
+    facts: [
+      ["Release year", "2023"],
+      ["Card name", "Pikachu with Grey Felt Hat"],
+      ["Card number", "#085"],
+      ["Set", "SVP Black Star Promos"],
+      ["Rarity / treatment", "Pokémon x Van Gogh promotional card"],
+      ["Grade", "PSA Gem Mint 10"]
+    ],
     description:
-      "A playful Van Gogh Museum-inspired promo with a gem mint PSA 10 grade and instant display-case charm.",
+      "A charming Pokémon x Van Gogh promo that blends Pikachu’s personality with museum-inspired artwork and instant display-case appeal.",
     highlight: "Featured promo",
     psaCert: "108806405",
     src: "/featured-felt-hat-pikachu-psa10.jpeg",
-    alt: "Pikachu with Grey Felt Hat PSA 10 slab from Sparky's Collection"
+    alt: "2023 Pikachu with Grey Felt Hat number 085 SVP Black Star Promo graded PSA Gem Mint 10"
   },
   {
-    title: "Umbreon ex Special Illustration Rare PSA 10",
-    caption: "2025 Prismatic Evolutions Umbreon ex #161 PSA 10",
+    title: "2025 — Umbreon ex #161/131 — Prismatic Evolutions — PSA 10",
+    caption: "Umbreon ex Special Illustration Rare",
+    facts: [
+      ["Release year", "2025"],
+      ["Card name", "Umbreon ex"],
+      ["Card number", "#161/131"],
+      ["Set", "Prismatic Evolutions"],
+      ["Rarity / treatment", "Special Illustration Rare"],
+      ["Grade", "PSA Gem Mint 10"]
+    ],
     description:
-      "A Prismatic Evolutions Special Illustration Rare displayed in a matching custom extended-art frame for a dramatic collection showcase.",
+      "A Prismatic Evolutions chase card showcased in a matching custom extended-art frame that turns the slab into a dramatic display piece.",
     highlight: "Extended-art display",
     psaCert: "115774888",
     src: "/sparkys-collection-umbreon-ex-prismatic-evolutions-psa10.jpeg",
-    alt: "2025 Prismatic Evolutions Umbreon ex Special Illustration Rare number 161 PSA 10 in a custom extended-art display frame"
+    alt: "2025 Umbreon ex number 161/131 from Prismatic Evolutions Special Illustration Rare graded PSA Gem Mint 10 in a custom extended-art display frame"
   },
   {
-    title: "Giratina V Alternate Art PSA 10",
-    caption: "2022 Lost Origin Giratina V #186 PSA 10",
+    title: "2022 — Giratina V #186/196 — Lost Origin Alternate Art — PSA 10",
+    caption: "Giratina V Alternate Art",
+    facts: [
+      ["Release year", "2022"],
+      ["Card name", "Giratina V"],
+      ["Card number", "#186/196"],
+      ["Set", "Lost Origin"],
+      ["Rarity / treatment", "Special Full Art / Alternate Full Art"],
+      ["Grade", "PSA Gem Mint 10"]
+    ],
     description:
-      "A Lost Origin full art alternate-art favorite paired with a matching custom extended-art display frame for Sparky's Collection.",
+      "A Lost Origin standout with Shinji Kanda’s Distortion World artwork, paired with a matching custom extended-art frame for the collection.",
     highlight: "Extended-art display",
     psaCert: "91575323",
     src: "/sparkys-collection-giratina-v-lost-origin-psa10.jpeg",
-    alt: "2022 Lost Origin Giratina V full art alternate art number 186 PSA 10 in a custom extended-art display frame"
+    alt: "2022 Giratina V number 186/196 from Lost Origin Alternate Art graded PSA Gem Mint 10 in a custom extended-art display frame"
   },
   {
-    title: "Bubble Mew PSA 10",
-    caption: "Bubble Mew PSA 10",
+    title: "2024 — Mew ex “Bubble Mew” #232/091 — Paldean Fates — PSA 10 Goal",
+    caption: "Mew ex “Bubble Mew”",
+    facts: [
+      ["Release year", "2024"],
+      ["Card name", "Mew ex “Bubble Mew”"],
+      ["Card number", "#232/091"],
+      ["Set", "Paldean Fates"],
+      ["Rarity / treatment", "Special Illustration Rare"],
+      ["Grade", "PSA Gem Mint 10 goal"]
+    ],
     note: "Future Collection Goal",
     description:
-      "A dream-list card for the collection, loved for its bright artwork and grail-card charm.",
+      "A bright, joyful dream-list card that would add a playful modern Mew centerpiece to Sparky's Collection.",
     highlight: "Future Goal"
   }
 ];
@@ -184,6 +240,14 @@ export default function SparkysCollection() {
               <div className="museum-label">
                 <h3>{card.title}</h3>
                 <p>{card.caption}</p>
+                <dl className="museum-card-facts">
+                  {card.facts.map(([label, value]) => (
+                    <div key={label}>
+                      <dt>{label}</dt>
+                      <dd>{value}</dd>
+                    </div>
+                  ))}
+                </dl>
                 <p className="museum-description">{card.description}</p>
                 {card.note ? <small>{card.note}</small> : null}
                 {card.psaCert ? (

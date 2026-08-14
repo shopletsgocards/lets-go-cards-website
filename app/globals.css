@@ -1194,6 +1194,35 @@ h3 {
   font-weight: 900;
 }
 
+.museum-card-facts {
+  display: grid;
+  gap: 5px;
+  margin: 12px 0 0;
+}
+
+.museum-card-facts div {
+  display: grid;
+  grid-template-columns: minmax(96px, 0.45fr) 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.museum-card-facts dt,
+.museum-card-facts dd {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.35;
+}
+
+.museum-card-facts dt {
+  color: var(--blue-700);
+  font-weight: 900;
+}
+
+.museum-card-facts dd {
+  color: var(--muted);
+}
+
 .museum-label .museum-description {
   margin-top: 10px;
   font-weight: 400;
