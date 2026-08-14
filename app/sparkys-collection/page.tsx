@@ -19,6 +19,7 @@ const featuredCards = [
     description:
       "A centerpiece modern grail with dramatic artwork, huge collector demand, and a gem mint PSA 10 grade.",
     highlight: "Featured grail",
+    psaCert: "63551640",
     src: "/featured-moonbreon-psa10.jpeg",
     alt: "Umbreon VMAX PSA 10 Moonbreon slab from Sparky's Collection"
   },
@@ -28,6 +29,7 @@ const featuredCards = [
     description:
       "A bold alternate-art favorite with standout color, playful energy, and display-case appeal.",
     highlight: "Collector favorite",
+    psaCert: "151290074",
     src: "/featured-gengar-vmax-psa10.jpeg",
     alt: "Gengar VMAX PSA 10 slab from Sparky's Collection"
   },
@@ -38,6 +40,7 @@ const featuredCards = [
     description:
       "A family favorite because Enzo pulled it himself before it earned a PSA 10 grade.",
     highlight: "Pulled by Enzo",
+    psaCert: "158529741",
     src: "/featured-pikachu-psa10.jpeg",
     alt: "Ascended Heroes Pikachu ex Special Illustration Rare PSA 10 slab from Sparky's Collection"
   },
@@ -47,26 +50,27 @@ const featuredCards = [
     description:
       "A playful Van Gogh Museum-inspired promo with a gem mint PSA 10 grade and instant display-case charm.",
     highlight: "Featured promo",
+    psaCert: "108806405",
     src: "/featured-felt-hat-pikachu-psa10.jpeg",
     alt: "Pikachu with Grey Felt Hat PSA 10 slab from Sparky's Collection"
   },
   {
     title: "Umbreon ex Special Illustration Rare PSA 10",
     caption: "2025 Prismatic Evolutions Umbreon ex #161 PSA 10",
-    note: "PSA Cert 115774888",
     description:
       "A Prismatic Evolutions Special Illustration Rare displayed in a matching custom extended-art frame for a dramatic collection showcase.",
     highlight: "Extended-art display",
+    psaCert: "115774888",
     src: "/sparkys-collection-umbreon-ex-prismatic-evolutions-psa10.jpeg",
     alt: "2025 Prismatic Evolutions Umbreon ex Special Illustration Rare number 161 PSA 10 in a custom extended-art display frame"
   },
   {
     title: "Giratina V Alternate Art PSA 10",
     caption: "2022 Lost Origin Giratina V #186 PSA 10",
-    note: "PSA Cert 91575323",
     description:
       "A Lost Origin full art alternate-art favorite paired with a matching custom extended-art display frame for Sparky's Collection.",
     highlight: "Extended-art display",
+    psaCert: "91575323",
     src: "/sparkys-collection-giratina-v-lost-origin-psa10.jpeg",
     alt: "2022 Lost Origin Giratina V full art alternate art number 186 PSA 10 in a custom extended-art display frame"
   },
@@ -182,6 +186,17 @@ export default function SparkysCollection() {
                 <p>{card.caption}</p>
                 <p className="museum-description">{card.description}</p>
                 {card.note ? <small>{card.note}</small> : null}
+                {card.psaCert ? (
+                  <a
+                    className="museum-psa-link"
+                    href={`https://www.psacard.com/cert/${card.psaCert}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Verify ${card.title} with PSA certification number ${card.psaCert}`}
+                  >
+                    Verify with PSA: {card.psaCert}
+                  </a>
+                ) : null}
               </div>
             </article>
           ))}

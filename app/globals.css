@@ -1205,6 +1205,23 @@ h3 {
   font-weight: 900;
 }
 
+.museum-psa-link {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--blue-700);
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: rgba(21, 87, 166, 0.35);
+  text-underline-offset: 3px;
+}
+
+.museum-psa-link:hover,
+.museum-psa-link:focus-visible {
+  color: var(--blue-900);
+  text-decoration-color: currentColor;
+}
+
 .collection-highlight-grid,
 .sell-type-grid {
   display: grid;
