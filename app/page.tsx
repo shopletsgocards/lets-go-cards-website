@@ -120,10 +120,53 @@ const homeFaq: FaqItem[] = [
   }
 ];
 
+const inventoryCategorySchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://www.shopletsgocards.com/#inventory-categories",
+  name: "Let's Go Cards Pokémon inventory categories",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      item: {
+        "@type": "Thing",
+        name: "Pokémon sealed products",
+        description: "General inventory category for Pokémon sealed products carried by the shop."
+      }
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      item: {
+        "@type": "Thing",
+        name: "PSA-graded Pokémon cards",
+        description: "General inventory category for PSA-graded Pokémon cards carried by the shop."
+      }
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      item: {
+        "@type": "Thing",
+        name: "Handmade Pokémon-themed merchandise and gifts",
+        description:
+          "General inventory category for handmade Pokémon-themed merchandise and gifts."
+      }
+    }
+  ]
+};
+
 export default function Home() {
   return (
     <main>
       <FaqJsonLd items={homeFaq} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(inventoryCategorySchema).replace(/</g, "\\u003c")
+        }}
+      />
       <section className="coming-soon-banner">
         <div className="coming-soon-copy">
           <p className="eyebrow">Now open</p>
