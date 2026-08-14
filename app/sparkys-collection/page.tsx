@@ -51,6 +51,26 @@ const featuredCards = [
     alt: "Pikachu with Grey Felt Hat PSA 10 slab from Sparky's Collection"
   },
   {
+    title: "Umbreon ex Special Illustration Rare PSA 10",
+    caption: "2025 Prismatic Evolutions Umbreon ex #161 PSA 10",
+    note: "PSA Cert 115774888",
+    description:
+      "A Prismatic Evolutions Special Illustration Rare displayed in a matching custom extended-art frame for a dramatic collection showcase.",
+    highlight: "Extended-art display",
+    src: "/sparkys-collection-umbreon-ex-prismatic-evolutions-psa10.jpeg",
+    alt: "2025 Prismatic Evolutions Umbreon ex Special Illustration Rare number 161 PSA 10 in a custom extended-art display frame"
+  },
+  {
+    title: "Giratina V Alternate Art PSA 10",
+    caption: "2022 Lost Origin Giratina V #186 PSA 10",
+    note: "PSA Cert 91575323",
+    description:
+      "A Lost Origin full art alternate-art favorite paired with a matching custom extended-art display frame for Sparky's Collection.",
+    highlight: "Extended-art display",
+    src: "/sparkys-collection-giratina-v-lost-origin-psa10.jpeg",
+    alt: "2022 Lost Origin Giratina V full art alternate art number 186 PSA 10 in a custom extended-art display frame"
+  },
+  {
     title: "Bubble Mew PSA 10",
     caption: "Bubble Mew PSA 10",
     note: "Future Collection Goal",
