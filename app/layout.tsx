@@ -124,21 +124,21 @@ const localBusinessSchema = {
     {
       "@type": "Offer",
       itemOffered: {
-        "@type": "Product",
+        "@type": "Service",
         name: "Pokémon sealed products"
       }
     },
     {
       "@type": "Offer",
       itemOffered: {
-        "@type": "Product",
+        "@type": "Service",
         name: "PSA graded Pokémon cards"
       }
     },
     {
       "@type": "Offer",
       itemOffered: {
-        "@type": "Product",
+        "@type": "Service",
         name: "Handmade Pokémon-themed merchandise and gifts"
       }
     }

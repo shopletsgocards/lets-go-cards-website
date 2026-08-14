@@ -18,6 +18,33 @@ const services = [
   ["Collection Reviews", "Get a second set of eyes before deciding what to sell, trade, keep, or consider for grading."]
 ];
 
+const serviceListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": "https://www.shopletsgocards.com/buy-sell-trade#services",
+  name: "Buy, Sell & Trade Pokémon Cards in Easton, PA",
+  itemListElement: services.map(([name, description], index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name,
+      description,
+      provider: {
+        "@type": "Store",
+        "@id": "https://www.shopletsgocards.com/#localbusiness",
+        name: "Let's Go Cards"
+      },
+      areaServed: [
+        "West Easton PA",
+        "Easton PA",
+        "Lehigh Valley PA"
+      ],
+      url: "https://www.shopletsgocards.com/buy-sell-trade"
+    }
+  }))
+};
+
 const buySellTradeFaq: FaqItem[] = [
   {
     question: "Can I trade Pokémon cards at Let's Go Cards?",
@@ -45,6 +72,12 @@ export default function BuySellTrade() {
   return (
     <main>
       <FaqJsonLd items={buySellTradeFaq} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceListSchema).replace(/</g, "\\u003c")
+        }}
+      />
       <section className="page-hero compact">
         <p className="eyebrow">Pokémon card counter in West Easton</p>
         <h1>Buy, Sell &amp; Trade Pokémon Cards in Easton, PA</h1>
